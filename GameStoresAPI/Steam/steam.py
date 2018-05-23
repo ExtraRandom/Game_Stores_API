@@ -1,5 +1,5 @@
 import bs4
-from GameStoresAPI.shared import get_page_raw
+from GameStoresAPI.shared import Shared
 import json
 
 
@@ -14,24 +14,18 @@ class Steam:
     def search_by_name(name, currency="gbp", language="en"):
         """Search for a game using a given name"""
         base_url = "https://store.steampowered.com/search/?cc={}&l={}&term=".format(currency, language)
-        full_url = base_url + format_search(name)
+        full_url = base_url + Steam.format_search(name)
 
-        base_data = bs4.BeautifulSoup(get_page_raw(full_url), "html.parser")
+        base_data = bs4.BeautifulSoup(Shared.get_page_raw(full_url), "html.parser")
 
         # print(full_url + "\n")
 
         if base_data.text == "Error":
             print("Error occured whilst getting data")
         else:
-            # print("No Error")
-            # print(base_data.select('div[id="search_result_container"] a[class="search_result_row ds_collapse_flag"]')[0]
-            #      .attrs['href'])  # This get the url the search result will lead to
-
             results = len(base_data.select('div[id="search_result_container"] '
                                            'a[class="search_result_row ds_collapse_flag"]')
                           )
-            # print("results:", results)
-            # return
 
             if results < 3:
                 range_end = results
@@ -74,9 +68,6 @@ class Steam:
                              "store_url": store_url}
                 game_data_list.append(game_data)
 
-
-            # test = json.dumps(game_data_list)
-            # print("TEST JSON IS: ", test)
             return game_data_list
 
         return 0
@@ -95,7 +86,7 @@ class Steam:
 
         url = "https://store.steampowered.com/api/appdetails/?appids={}&cc={}".format(app_id, currency)
 
-        jdata = get_page_raw(url)
+        jdata = Shared.get_page_raw(url)
         # print(jdata)
 
         if jdata == "Error":
