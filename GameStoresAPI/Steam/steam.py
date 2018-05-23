@@ -1,6 +1,5 @@
-import requests
 import bs4
-from shared import get_page_raw
+from GameStoresAPI.shared import get_page_raw
 import json
 
 
