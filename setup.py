@@ -16,12 +16,15 @@ setup(name='GameStoresAPI',
       license='MIT',
       description='This is where the description would go',
       install_requires=requirements,
-      packages=['ITAD',
+      packages=['Steam']
+      """['ITAD',
                 # 'Origin',
                 'Playstation',
                 'Steam',
                 # 'Xbox'
-                ])
+                ]
+                """
+                )
 
 
 
