@@ -1,13 +1,8 @@
 from distutils.core import setup
-import re
 
 requirements = []
 with open('requirements.txt') as f:
     requirements = f.read().splitlines()
-
-# version = ''
-# with open('GamesStoresAPI\__init__.py') as f:
-#    version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', f.read(), re.MULTILINE).group(1)
 
 setup(name='GameStoresAPI',
       author='Extra_Random',
@@ -17,6 +12,8 @@ setup(name='GameStoresAPI',
       description='This is where the description would go',
       install_requires=requirements,
       packages=['GameStoresAPI.Steam',
+                # 'GameStoresAPI.Origin',
+                # 'GameStoresAPI.Xbox',
                 'GameStoresAPI.ITAD',
                 'GameStoresAPI.Playstation'])
 
