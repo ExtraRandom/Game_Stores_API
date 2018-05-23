@@ -9,7 +9,7 @@ version = ''
 with open('Games_Stores_API/__init__.py') as f:
     version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', f.read(), re.MULTILINE).group(1)
 
-setup(name='game_stores_api',
+setup(name='Game-Stores-API',
       author='Extra_Random',
       author_email='a',
       version=version,
