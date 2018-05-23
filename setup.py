@@ -1,12 +1,12 @@
 from distutils.core import setup
-import os, re
+import re
 
 requirements = []
 with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 version = ''
-with open('Games_Stores_API/__init__.py') as f:
+with open('Games_Stores_API\__init__.py') as f:
     version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', f.read(), re.MULTILINE).group(1)
 
 setup(name='GameStoresAPI',
