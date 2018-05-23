@@ -9,14 +9,19 @@ version = ''
 with open('Games_Stores_API/__init__.py') as f:
     version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', f.read(), re.MULTILINE).group(1)
 
-setup(name='Game-Stores-API',
+setup(name='GameStoresAPI',
       author='Extra_Random',
-      author_email='a',
+      author_email='crazyblob11@gmail.com',
       version=version,
       license='MIT',
-      description='a',
+      description='This is where the description would go',
       install_requires=requirements,
-      packages=['ITAD', 'Origin', 'Playstation', 'Steam', 'Xbox'])
+      packages=['ITAD',
+                # 'Origin',
+                'Playstation',
+                'Steam',
+                # 'Xbox'
+                ])
 
 
 

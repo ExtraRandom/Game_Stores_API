@@ -1,2 +1,2 @@
-title = "Game_Stores_API"
+title = "GameStoresAPI"
 __version__ = '0.0.1'
