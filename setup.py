@@ -16,7 +16,7 @@ setup(name='GameStoresAPI',
       license='MIT',
       description='This is where the description would go',
       install_requires=requirements,
-      packages=['steam'])
+      packages=['GameStoresApi.Steam'])
 
 
 
