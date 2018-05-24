@@ -1,10 +1,7 @@
-import asyncio
-import GameStoresAPI.ITAD.itad
-from GameStoresAPI.Playstation.playstation import Playstation
-
 from GameStoresAPI.ITAD.itad import Itad as itad
+import itad_api_key as iak
 
-api_key = "a04182c5789ab3ed79e2cfeb07e4bc93199145e6"
+api_key = iak.key
 
 list = ["app/865430", "app/440", "app/570940"]
 
