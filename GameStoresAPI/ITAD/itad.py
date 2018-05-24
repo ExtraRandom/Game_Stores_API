@@ -1,5 +1,5 @@
-import requests
 import json
+from GameStoresAPI.Shared.shared import Shared
 
 
 class Itad:
@@ -7,8 +7,8 @@ class Itad:
     @staticmethod
     def get_plain_from_steam_appid(api_key, app_id):
         url = "https://api.isthereanydeal.com/v02/game/plain/?key={}&shop=steam&game_id={}".format(api_key, app_id)
-        resp = requests.get(url)
-        data = json.loads(resp.text)
+        data = json.loads(Shared.get_page_raw(url))      # resp = requests.get(url)      # data = json.loads(resp.text)
+
         if data['.meta']['match'] == False:
             return "Error", "App doesn't exist on ITAD"
         else:
@@ -17,8 +17,7 @@ class Itad:
     @staticmethod
     def get_all_prices(api_key, plain, region="uk"):
         url = "https://api.isthereanydeal.com/v01/game/prices/?key={}&plains={}&region={}".format(api_key, plain, region)
-        resp = requests.get(url)
-        data = json.loads(resp.text)
+        data = json.loads(Shared.get_page_raw(url))
 
         pdata = data['data'][plain]['list']
 
@@ -27,8 +26,10 @@ class Itad:
     @staticmethod
     def get_best_price(api_key, plain, region="uk"):
         url = "https://api.isthereanydeal.com/v01/game/prices/?key={}&plains={}&region={}".format(api_key, plain, region)
-        resp = requests.get(url)
-        data = json.loads(resp.text)
+        data = json.loads(Shared.get_page_raw(url))
+
+        if len(data['data'][plain]['list']) == 0:
+            return "Error", "", ""
 
         price = data['data'][plain]['list'][0]['price_new']
         url = data['data'][plain]['list'][0]['url']

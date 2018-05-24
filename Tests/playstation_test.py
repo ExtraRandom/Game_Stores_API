@@ -1,4 +1,4 @@
-from Playstation import playstation
+from GameStoresAPI.Playstation.playstation import Playstation
 
 test_urls = ["https://store.playstation.com/en-gb/product/EP0002-CUSA05282_00-CODIWPREORDER001",
              "https://store.playstation.com/en-gb/product/EP0002-BLES00354_00-DISCONLYPARENT00",
@@ -29,8 +29,8 @@ test_content_types = [["games", "bundles"],  # 1
                       ["video games lad"]]  # 5
 
 for i in range(0, len(test_game_names)):
-    bs4_url = playstation.format_url(test_content_types[i], test_platforms[i], test_game_names[i])
-    print(playstation.get_data(bs4_url))
+    bs4_url = Playstation.format_url(test_content_types[i], test_platforms[i], test_game_names[i])
+    print(Playstation.get_data(bs4_url))
 
 """
 valid_platforms = ["ps4", "ps3", "vita", "psp"]

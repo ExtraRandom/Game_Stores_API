@@ -1,6 +1,5 @@
 import bs4
-from GameStoresAPI.shared import get_page_raw
-
+from GameStoresAPI.Shared.shared import Shared
 
 class Playstation:
 
@@ -63,7 +62,7 @@ class Playstation:
 
         # TODO decide how to handle results with multiple pages (currently the other pages are ignored)
 
-        base_data = bs4.BeautifulSoup(get_page_raw(url), "html.parser")
+        base_data = bs4.BeautifulSoup(Shared.get_page_raw(url), "html.parser")
 
         game_data_list = []
 
@@ -124,7 +123,7 @@ class Playstation:
         '<div class="tech-specs"> contains genre, audio and subtitle language and file size info
         """
 
-        base_data = bs4.BeautifulSoup(get_page_raw(url), "html.parser")
+        base_data = bs4.BeautifulSoup(Shared.get_page_raw(url), "html.parser")
 
         if base_data.text == "Error":
             print("Error occured whilst getting data")
