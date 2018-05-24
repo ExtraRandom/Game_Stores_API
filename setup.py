@@ -11,7 +11,7 @@ setup(name='GameStoresAPI',
       license='MIT',
       description='This is where the description would go',
       install_requires=requirements,
-      packages=['shared'
+      packages=['shared',
                 'GameStoresAPI.Steam',
                 # 'GameStoresAPI.Origin',
                 # 'GameStoresAPI.Xbox',
