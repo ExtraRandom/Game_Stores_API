@@ -1,11 +1,18 @@
 import bs4
 from GameStoresAPI.Shared.shared import Shared
 
+
 class Playstation:
+    # TODO change naming of methods to be more similar to steam and itad
 
     @staticmethod
     def url_encode(input):
-        """Format a game name string so it's suitable for use on Playstation store"""
+        """
+        Format a game name string so it's suitable for use on Playstation store
+
+        :param input: game name to encode
+        :return: encoded game name
+        """
         # https://stackoverflow.com/questions/6182356/what-is-2c-in-a-url
         output = input
         replace_with_space = [" ", "&", "="]
@@ -15,7 +22,16 @@ class Playstation:
 
     @staticmethod
     def format_url(content_type, platform, query, page_number=1, region="en-gb"):
-        """Format URL"""
+        """
+        Format URL
+
+        :param content_type: See valid_tent_types
+        :param platform: See valid_platforms
+        :param query: Search term
+        :param page_number: Page number to check, Defaults to 1
+        :param region: Region to check, Defaults to en-gb
+        :return: Formatted URL
+        """
 
         url = "https://store.playstation.com/{}/grid/search-game/{}?".format(region, page_number)
 
@@ -53,14 +69,16 @@ class Playstation:
         if final_platform is not None:
             final_url += final_platform[:-1] + "&"
 
-        final_url += "query=" + url_encode(query)
+        final_url += "query=" + Playstation.url_encode(query)
         return url + final_url
 
     @staticmethod
     def get_data(url):
-        """Get data about the games (price, name, thumbnail, etc) from search results"""
+        """Get data about the games (price, name, thumbnail, etc) from search results
 
-        # TODO decide how to handle results with multiple pages (currently the other pages are ignored)
+        :param url:
+        :return:
+        """
 
         base_data = bs4.BeautifulSoup(Shared.get_page_raw(url), "html.parser")
 
@@ -116,7 +134,11 @@ class Playstation:
 
     @staticmethod
     def get_page_data(url):
-        """Get data from the store page of a game such as price, addons, themes, extras and bundles"""
+        """Get data from the store page of a game such as price, addons, themes, extras and bundles
+
+        :param url: URL of page to check
+        :return: Data from page
+        """
 
         """
         The page element '<div class="sku-info"> contains pricing and platform data
@@ -126,10 +148,8 @@ class Playstation:
         base_data = bs4.BeautifulSoup(Shared.get_page_raw(url), "html.parser")
 
         if base_data.text == "Error":
-            print("Error occured whilst getting data")
             return "Error"
         else:
-            # print("This is where the stuff happens")
             # TODO get release date
             # TODO check for div[class='price-availability'] and use
 
@@ -142,10 +162,11 @@ class Playstation:
 
             price = base_data.select('div[class="sku-info"] h3[class="price-display__price"]')[0].text
             if price == "":
-                price = base_data.select('h5[class="provider-info__text"] span[class="provider-info__list-item"]')[0].text
-                # price = "N/A"
+                price = base_data.select('h5[class="provider-info__text"] span[class="provider-info__list-item"]'
+                                         '')[0].text
 
-            platform = base_data.select('div[class="sku-info"] a[class="playable-on__buttons tiny secondary hollow button"]'
+            platform = base_data.select('div[class="sku-info"] a[class="playable-on__'
+                                        'buttons tiny secondary hollow button"]'
                                         )[0].text
 
             info = ["Genre", "Audio", "Subtitles", "File Size"]
@@ -182,10 +203,10 @@ class Playstation:
 
 
 valid_platforms = ["ps4", "ps3", "vita", "psp"]
-# platform
+# Valid platforms to search with
 
 valid_content_types = ["games", "bundles", "addons", "themes", "other_extras", "timed_trials"]
-# gameContentType
+# Valid content types to search with
 
 
 
