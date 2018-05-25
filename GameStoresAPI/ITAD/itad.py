@@ -15,6 +15,16 @@ class Itad:
             return data['data']['plain']
 
     @staticmethod
+    def get_plain_from_title(api_key, title):
+        url = "https://api.isthereanydeal.com/v02/game/plain/?key={}&title={}".format(api_key, title)
+        data = json.loads(Shared.get_page_raw(url))
+
+        if data['.meta']['match'] == False:
+            return "Error", "Title doesn't match anything on ITAD, check spelling"
+        else:
+            return data['data']['plain']
+
+    @staticmethod
     def get_all_prices(api_key, plain, region="uk"):
         url = "https://api.isthereanydeal.com/v01/game/prices/?key={}&plains={}&region={}".format(api_key, plain, region)
         data = json.loads(Shared.get_page_raw(url))
@@ -29,7 +39,7 @@ class Itad:
         data = json.loads(Shared.get_page_raw(url))
 
         if len(data['data'][plain]['list']) == 0:
-            return "Error", "", ""
+            return "Error", "Check plain exists and is correct and try again", "Error"
 
         price = data['data'][plain]['list'][0]['price_new']
         url = data['data'][plain]['list'][0]['url']
