@@ -4,9 +4,9 @@ import itad_api_key as iak
 api_key = iak.key
 
 list = ["app/865430", "app/440", "app/570940"]
-t_list = ["call of duty world at war", "mass effect 2", "pillars of eternity", "ca ll of duty ww 2"]
+t_list = ["call of duty world at war", "mass effect 2", "pillars of eternity", "battlefield 5"]
 
-run_this_test = True
+run_this_test = False
 if run_this_test is True:
     # for i in range(len(list)):
     for i in range(len(t_list)):
@@ -19,10 +19,14 @@ if run_this_test is True:
         else:
             print(resp)
 
-plain_list = ["destinyii", "callofdutywwii", "darksoulsremastered"]
+plain_list = ["battlefieldv", "destinyii", "callofdutywwii", "darksoulsremastered"]
 
-for i in range(len(list)):
-    # resp = itad.get_all_prices(api_key, plain_list[i])
-    resp = itad.get_best_price(api_key, plain_list[i])
-    print(resp)
+run_this_other_test = False
+if run_this_other_test is True:
+    for i in range(len(list)):
+        # resp = itad.get_all_prices(api_key, plain_list[i])
+        resp = itad.get_best_price(api_key, plain_list[i])
+        print(resp)
+
+resp = itad.get_multiple_plains_from_steam_appids(api_key, list)
 

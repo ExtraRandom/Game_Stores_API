@@ -102,7 +102,7 @@ class Playstation:
 
                 if base_data.select('div[class="ember-view"] div[class="grid-cell__body"]')[i].select(
                         'h3[class="price-display__price"]'):
-                   price = base_data.select('div[class="ember-view"] div[class="grid-cell__body"]')[i].select(
+                    price = base_data.select('div[class="ember-view"] div[class="grid-cell__body"]')[i].select(
                        'h3[class="price-display__price"]')[0].text
                 else:
                     # Price doesn't exist in typical form
@@ -181,7 +181,7 @@ class Playstation:
                         detail = base_data.select('div[class="tech-specs"] div[class="tech-specs__menu-header"]'
                                                   )[i].next_element.next_element.next_element.text
                         detail = detail.strip()
-                        detail = detail.replace((title + "\n"), "")  # print("detail", detail)
+                        detail = detail.replace((title + "\n"), "")
 
                         if detail_str == "Genre":
                             genre = detail
@@ -194,7 +194,6 @@ class Playstation:
 
             else:
                 pass
-                # print("NAH NO TECH SPECS MATE")
 
         return_data = {"title": title, "price": price, "platform": platform, "genre": genre, "audio": audio,
                        "subtitles": subtitles, "filesize": filesize}

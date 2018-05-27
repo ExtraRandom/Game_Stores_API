@@ -12,3 +12,20 @@ class Shared:
         else:
             return "Error"
 
+    @staticmethod
+    def url_encode(to_encode, encode_char_list):
+        """ """
+        output = to_encode
+        for replace_char in encode_char_list:
+            output = output.replace(replace_char, "%20")
+        return output
+
+
+
+
+
+
+
+
+
+

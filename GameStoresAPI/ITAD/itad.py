@@ -3,6 +3,25 @@ from GameStoresAPI.Shared.shared import Shared
 
 
 class Itad:
+    # TODO add info method https://itad.docs.apiary.io/#reference/game/info/get-info-about-game
+
+    @staticmethod
+    def get_multiple_plains_from_steam_appids(api_key, app_id_list):
+        """Get multiple plains from multiple given app id's
+
+        :param api_key: ITAD API Key
+        :param app_id_list: List of steam Game APP ID's
+        :return: List of plains for the given app id's
+        """
+        url = "https://api.isthereanydeal.com/v01/game/plain/id/?key={}&shop=steam&ids={}" \
+              "".format(api_key, ",".join(app_id_list))
+
+        data = json.loads(Shared.get_page_raw(url))  # print(data)  # d_len = len(data['data'])
+        results = []
+
+        for i in app_id_list:  # range(d_len):
+            results.append(data['data'][i])  # print(results)
+        return results
 
     @staticmethod
     def get_plain_from_steam_appid(api_key, app_id):
@@ -13,7 +32,7 @@ class Itad:
         :return: The plain for the given app id or error if it doesn't exist
         """
         url = "https://api.isthereanydeal.com/v02/game/plain/?key={}&shop=steam&game_id={}".format(api_key, app_id)
-        data = json.loads(Shared.get_page_raw(url))      # resp = requests.get(url)      # data = json.loads(resp.text)
+        data = json.loads(Shared.get_page_raw(url))
 
         if data['.meta']['match'] == False:
             return "Error", "App doesn't exist on ITAD"

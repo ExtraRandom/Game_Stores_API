@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="">
+    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="[PS] Fixed URL format&#10;Also add some more documentation in places and tidied up a bit">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Tests/origin_test.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Tests/xbox_test.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/GameStoresAPI/ITAD/itad.py" afterPath="$PROJECT_DIR$/GameStoresAPI/ITAD/itad.py" />
+      <change beforePath="$PROJECT_DIR$/GameStoresAPI/Origin/origin.py" afterPath="$PROJECT_DIR$/GameStoresAPI/Origin/origin.py" />
       <change beforePath="$PROJECT_DIR$/GameStoresAPI/Playstation/playstation.py" afterPath="$PROJECT_DIR$/GameStoresAPI/Playstation/playstation.py" />
-      <change beforePath="$PROJECT_DIR$/GameStoresAPI/Steam/steam.py" afterPath="$PROJECT_DIR$/GameStoresAPI/Steam/steam.py" />
-      <change beforePath="$PROJECT_DIR$/GameStoresAPI/Steam/tags.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/GameStoresAPI/__init__.py" afterPath="$PROJECT_DIR$/GameStoresAPI/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/GameStoresAPI/Shared/shared.py" afterPath="$PROJECT_DIR$/GameStoresAPI/Shared/shared.py" />
+      <change beforePath="$PROJECT_DIR$/GameStoresAPI/Xbox/xbox.py" afterPath="$PROJECT_DIR$/GameStoresAPI/Xbox/xbox.py" />
+      <change beforePath="$PROJECT_DIR$/Tests/itad_test.py" afterPath="$PROJECT_DIR$/Tests/itad_test.py" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
       <change beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="shared.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shared.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GameStoresAPI/Shared/shared.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -32,29 +36,84 @@
       <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+            <state relative-caret-position="255">
+              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="playstation.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GameStoresAPI/Playstation/playstation.py">
+      <file leaf-file-name="steam.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameStoresAPI/Steam/steam.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#206#648#0" expanded="false" />
-                <element signature="e#206#379#1" expanded="false" />
-                <element signature="e#758#2458#0" expanded="false" />
-                <element signature="e#758#1075#1" expanded="false" />
-                <element signature="e#2509#5517#0" expanded="false" />
-                <element signature="e#2509#2636#1" expanded="false" />
-                <element signature="e#5573#8563#0" expanded="false" />
-                <element signature="e#5573#5750#1" expanded="false" />
+                <element signature="e#148#342#0" expanded="false" />
+                <element signature="e#148#271#1" expanded="false" />
+                <element signature="e#431#2969#0" expanded="false" />
+                <element signature="e#431#681#1" expanded="false" />
+                <element signature="e#3043#4614#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="itad.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameStoresAPI/ITAD/itad.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="57" column="17" lean-forward="true" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#265#877#0" expanded="false" />
+                <element signature="e#265#477#1" expanded="false" />
+                <element signature="e#958#1486#0" expanded="false" />
+                <element signature="e#958#1162#1" expanded="false" />
+                <element signature="e#1560#2103#0" expanded="false" />
+                <element signature="e#1560#1766#1" expanded="false" />
+                <element signature="e#2184#2671#0" expanded="false" />
+                <element signature="e#2184#2430#1" expanded="false" />
+                <element signature="e#2752#3522#0" expanded="false" />
+                <element signature="e#2752#3002#1" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="itad_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/itad_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+              <folding>
+                <element signature="e#750#916#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="origin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameStoresAPI/Origin/origin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="e#13#59#0" expanded="true" />
+                <element signature="e#266#791#1" expanded="false" />
+                <element signature="e#796#1692#1" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="origin_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/origin_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,7 +149,6 @@
         <option value="$PROJECT_DIR$/Origin/origin.py" />
         <option value="$PROJECT_DIR$/Xbox/xbox.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Game_Stores_API/Steam/__init__.py" />
         <option value="$PROJECT_DIR$/Game_Stores_API/__init__.py" />
         <option value="$PROJECT_DIR$/Game_Stores_API/Steam/steam.py" />
@@ -103,21 +161,29 @@
         <option value="$PROJECT_DIR$/GameStoresAPI/Shared/__init__.py" />
         <option value="$PROJECT_DIR$/Tests/playstation_test.py" />
         <option value="$PROJECT_DIR$/itad_api_key.py" />
-        <option value="$PROJECT_DIR$/Tests/itad_test.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/GameStoresAPI/ITAD/itad.py" />
         <option value="$PROJECT_DIR$/GameStoresAPI/Steam/steam.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/GameStoresAPI/__init__.py" />
         <option value="$PROJECT_DIR$/GameStoresAPI/Playstation/playstation.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/Tests/xbox_test.py" />
+        <option value="$PROJECT_DIR$/GameStoresAPI/Xbox/xbox.py" />
+        <option value="$PROJECT_DIR$/Tests/origin.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/Tests/origin_json.json" />
+        <option value="$PROJECT_DIR$/GameStoresAPI/Shared/shared.py" />
+        <option value="$PROJECT_DIR$/Tests/origin_test.py" />
+        <option value="$PROJECT_DIR$/GameStoresAPI/Origin/origin.py" />
+        <option value="$PROJECT_DIR$/Tests/itad_test.py" />
+        <option value="$PROJECT_DIR$/GameStoresAPI/ITAD/itad.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="340" />
+    <option name="y" value="212" />
+    <option name="width" value="1251" />
+    <option name="height" value="838" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -135,6 +201,63 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
+              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
+              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="ITAD" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
+              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="Origin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
+              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="Playstation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
+              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="Shared" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
+              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="Steam" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
+              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="Xbox" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scratches">
         <subPane>
           <expand>
@@ -171,48 +294,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="ITAD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="Playstation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="Steam" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\Python\Game_Stores_API\Tests" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="I:\Python\Game_Stores_API\Tests" />
       <recent name="I:\Python\Game_Stores_API\GameStoresAPI\Shared" />
@@ -233,7 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.playstation_test">
+  <component name="RunManager" selected="Python.itad_test">
     <configuration name="itad_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -247,6 +334,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Game_Stores_API" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/itad_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="origin_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Game_Stores_API" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/origin_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -306,38 +411,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/steam" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Game_Stores_API" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steam/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.test" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test (2)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.itad_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.steam_test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.playstation_test" />
+      <item index="0" class="java.lang.String" itemvalue="Python.test (2)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.itad_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.steam_test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.playstation_test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.origin_test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.playstation_test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.itad_test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.steam_test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test (2)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.itad_test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.origin_test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.playstation_test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.steam_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -523,17 +610,24 @@
       <option name="project" value="LOCAL" />
       <updated>1527231903069</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="[PS] Fixed URL format&#10;Also add some more documentation in places and tidied up a bit">
+      <created>1527242625455</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1527242625455</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13909379" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33913043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33695653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -566,7 +660,8 @@
     <MESSAGE value="Typo fix" />
     <MESSAGE value="Remove a whoops" />
     <MESSAGE value="[ITAD] Added getting plain from title" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ITAD] Added getting plain from title" />
+    <MESSAGE value="[PS] Fixed URL format&#10;Also add some more documentation in places and tidied up a bit" />
+    <option name="LAST_COMMIT_MESSAGE" value="[PS] Fixed URL format&#10;Also add some more documentation in places and tidied up a bit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -575,73 +670,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/ITAD/itad.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#153#749#0" expanded="false" />
-            <element signature="e#153#357#1" expanded="false" />
-            <element signature="e#823#1366#0" expanded="false" />
-            <element signature="e#823#1029#1" expanded="false" />
-            <element signature="e#1447#1934#0" expanded="false" />
-            <element signature="e#1447#1693#1" expanded="false" />
-            <element signature="e#2015#2785#0" expanded="false" />
-            <element signature="e#2015#2265#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Steam/steam.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#148#342#0" expanded="false" />
-            <element signature="e#148#271#1" expanded="false" />
-            <element signature="e#431#2969#0" expanded="false" />
-            <element signature="e#431#681#1" expanded="false" />
-            <element signature="e#3043#4614#0" expanded="false" />
-            <element signature="e#3043#3271#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Playstation/playstation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#206#648#0" expanded="false" />
-            <element signature="e#206#379#1" expanded="false" />
-            <element signature="e#758#2458#0" expanded="false" />
-            <element signature="e#758#1075#1" expanded="false" />
-            <element signature="e#2509#5517#0" expanded="false" />
-            <element signature="e#2509#2636#1" expanded="false" />
-            <element signature="e#5573#8563#0" expanded="false" />
-            <element signature="e#5573#5750#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GameStoresAPI/ITAD/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -744,13 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Steam/test.py" />
     <entry file="file://$PROJECT_DIR$/Xbox/xbox.py" />
     <entry file="file://$PROJECT_DIR$/Playstation/playstation.py" />
@@ -797,14 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Shared/shared.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/steam_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -812,17 +825,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Xbox/xbox.py">
+    <entry file="file://$PROJECT_DIR$/itad_api_key.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/itad_test.py">
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Steam/tags.txt" />
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -836,67 +850,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/itad_api_key.py">
+    <entry file="file://$PROJECT_DIR$/Tests/playstation_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/xbox_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Steam/tags.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5265">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/__init__.py">
+    <entry file="file://$PROJECT_DIR$/Tests/origin_json2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Xbox/xbox.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/playstation_test.py">
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Playstation/playstation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="72" lean-forward="false" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
+        <state relative-caret-position="68">
+          <caret line="82" column="8" lean-forward="false" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/origin_json.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/origin_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/ITAD/itad.py">
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Origin/origin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#153#749#0" expanded="false" />
-            <element signature="e#153#357#1" expanded="false" />
-            <element signature="e#823#1366#0" expanded="false" />
-            <element signature="e#823#1029#1" expanded="false" />
-            <element signature="e#1447#1934#0" expanded="false" />
-            <element signature="e#1447#1693#1" expanded="false" />
-            <element signature="e#2015#2785#0" expanded="false" />
-            <element signature="e#2015#2265#1" expanded="false" />
+            <element signature="e#13#59#0" expanded="true" />
+            <element signature="e#266#791#1" expanded="false" />
+            <element signature="e#796#1692#1" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GameStoresAPI/Steam/steam.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#148#342#0" expanded="false" />
@@ -904,26 +930,53 @@
             <element signature="e#431#2969#0" expanded="false" />
             <element signature="e#431#681#1" expanded="false" />
             <element signature="e#3043#4614#0" expanded="false" />
-            <element signature="e#3043#3271#1" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Playstation/playstation.py">
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/ITAD/itad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="57" column="17" lean-forward="true" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#206#648#0" expanded="false" />
-            <element signature="e#206#379#1" expanded="false" />
-            <element signature="e#758#2458#0" expanded="false" />
-            <element signature="e#758#1075#1" expanded="false" />
-            <element signature="e#2509#5517#0" expanded="false" />
-            <element signature="e#2509#2636#1" expanded="false" />
-            <element signature="e#5573#8563#0" expanded="false" />
-            <element signature="e#5573#5750#1" expanded="false" />
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#265#877#0" expanded="false" />
+            <element signature="e#265#477#1" expanded="false" />
+            <element signature="e#958#1486#0" expanded="false" />
+            <element signature="e#958#1162#1" expanded="false" />
+            <element signature="e#1560#2103#0" expanded="false" />
+            <element signature="e#1560#1766#1" expanded="false" />
+            <element signature="e#2184#2671#0" expanded="false" />
+            <element signature="e#2184#2430#1" expanded="false" />
+            <element signature="e#2752#3522#0" expanded="false" />
+            <element signature="e#2752#3002#1" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/itad_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding>
+            <element signature="e#750#916#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Shared/shared.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
