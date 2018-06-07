@@ -34,16 +34,21 @@ class Steam:
         else:
             results = len(base_data.select('div[id="search_result_container"] '
                                            'a[class="search_result_row ds_collapse_flag"]'))
+            if results == 0:
+                return [{"results": False}]
+
+            """
             if results < 3:
                 range_end = results
                 if range_end == 0:
                     return [{"results": False}]
             else:
                 range_end = 3
+            """
 
             game_data_list = [{"results": True}]
 
-            for i in range(0, range_end):
+            for i in range(0, results):
                 data = base_data.select('div[id="search_result_container"] '
                                         'a[class="search_result_row ds_collapse_flag"]'
                                         '')[i]
