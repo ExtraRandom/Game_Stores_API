@@ -6,15 +6,15 @@ class Playstation:
     # TODO change naming of methods to be more similar to steam and itad
 
     @staticmethod
-    def url_encode(input):
+    def url_encode(u_input):
         """
         Format a game name string so it's suitable for use on Playstation store
 
-        :param input: game name to encode
+        :param u_input: game name to encode
         :return: encoded game name
         """
         # https://stackoverflow.com/questions/6182356/what-is-2c-in-a-url
-        output = input
+        output = u_input
         replace_with_space = [" ", "&", "="]
         for replace_char in replace_with_space:
             output = output.replace(replace_char, "%20")
@@ -127,7 +127,7 @@ class Playstation:
                 img = base_data.select('div[class="ember-view"] div[class="grid-cell__thumbnail"]')[i].select(
                     'div[class="product-image__img product-image__img--main"]')[0].find("img").attrs['src']
 
-                this_data = {title: {"price": price, "id": title_id, "platforms": platforms, "img": img}}
+                this_data = {"title": title, "price": price, "id": title_id, "platforms": platforms, "img": img}
                 game_data_list.append(this_data)
 
         return game_data_list
