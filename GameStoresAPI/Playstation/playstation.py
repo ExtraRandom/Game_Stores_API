@@ -152,6 +152,7 @@ class Playstation:
         else:
             # TODO get release date
             # TODO check for div[class='price-availability'] and use
+            # TODO more error catching
 
             genre = "No Data"
             subtitles = "No Data"
@@ -159,11 +160,13 @@ class Playstation:
             filesize = "No Data"
 
             title = base_data.select('h2[class="pdp__title"]')[0].text
-
-            price = base_data.select('div[class="sku-info"] h3[class="price-display__price"]')[0].text
-            if price == "":
-                price = base_data.select('h5[class="provider-info__text"] span[class="provider-info__list-item"]'
-                                         '')[0].text
+            try:
+                price = base_data.select('div[class="sku-info"] h3[class="price-display__price"]')[0].text
+                if price == "":
+                        price = base_data.select('h5[class="provider-info__text"] span[class="provider-info__list-item"]'
+                                                 '')[0].text
+            except IndexError:
+                price = "Unknown"
 
             platform = base_data.select('div[class="sku-info"] a[class="playable-on__'
                                         'buttons tiny secondary hollow button"]'
