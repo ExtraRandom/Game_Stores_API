@@ -32,25 +32,17 @@ class Steam:
         if base_data.text == "Error":
             return "Error occured whilst getting Steam data"
         else:
-            results = len(base_data.select('div[id="search_result_container"] '
-                                           'a[class="search_result_row ds_collapse_flag"]'))
+            results = len(base_data.select('div[id="search_result_container"]'
+                                           ' div a[class="search_result_row ds_collapse_flag "]'))
+
             if results == 0:
                 return [{"results": False}]
-
-            """
-            if results < 3:
-                range_end = results
-                if range_end == 0:
-                    return [{"results": False}]
-            else:
-                range_end = 3
-            """
 
             game_data_list = [{"results": True}]
 
             for i in range(0, results):
                 data = base_data.select('div[id="search_result_container"] '
-                                        'a[class="search_result_row ds_collapse_flag"]'
+                                        'a[class="search_result_row ds_collapse_flag "]'
                                         '')[i]
                 store_url = data.attrs['href']
                 title = data.select('span[class="title"]')[0].text
