@@ -101,16 +101,17 @@ class Itad:
         :param region: Pricing region, Default is UK
         :return: Lowest ever price for the given plain
         """
-        url = "https://api.isthereanydeal.com/v01/game/lowest/?key={}&plains={}&region={}&until=".format(api_key, plain,
-                                                                                                         region)
+        url = "https://api.isthereanydeal.com/v01/game/lowest/?key={}&plains={}&region={}&until=" \
+              "".format(api_key, plain, region)
         data = json.loads(Shared.get_page_raw(url))
+
         if len(data["data"][plain]) == 5:
             currency = data[".meta"]["currency"]
             price = data["data"][plain]["price"]
             shop = data["data"][plain]["shop"]["name"]
             return currency, price, shop
         else:
-            return "Error", "E", "E"
+            return "Error", "Error", "Error"
 
 
 
