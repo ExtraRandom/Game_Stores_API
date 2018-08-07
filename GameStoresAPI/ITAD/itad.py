@@ -91,3 +91,26 @@ class Itad:
         shop = data['data'][plain]['list'][0]['shop']['name']
 
         return price, url, shop
+
+    @staticmethod
+    def get_historical_best_price(api_key, plain, region="uk"):
+        """Get best historical (all time) price for a given plain
+
+        :param api_key: ITAD API Key
+        :param plain: ITAD Plain for game to get best price for
+        :param region: Pricing region, Default is UK
+        :return: Lowest ever price for the given plain
+        """
+        url = "https://api.isthereanydeal.com/v01/game/lowest/?key={}&plains={}&region={}&until=".format(api_key, plain,
+                                                                                                         region)
+        data = json.loads(Shared.get_page_raw(url))
+        if len(data["data"][plain]) == 5:
+            currency = data[".meta"]["currency"]
+            price = data["data"][plain]["price"]
+            shop = data["data"][plain]["shop"]["name"]
+            return currency, price, shop
+        else:
+            return "Error", "E", "E"
+
+
+
