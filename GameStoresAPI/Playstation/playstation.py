@@ -25,7 +25,7 @@ class Playstation:
         """
         Format URL
 
-        :param content_type: See valid_tent_types
+        :param content_type: See valid_content_types
         :param platform: See valid_platforms
         :param query: Search term
         :param page_number: Page number to check, Defaults to 1
@@ -73,6 +73,19 @@ class Playstation:
         return url + final_url
 
     @staticmethod
+    def search_games(query, platform):
+        """Search specifically for games on PlayStation Store
+
+        :param query: Search Term
+        :param platform: See valid_platforms
+        :return:
+        """
+        s_url = Playstation.format_url(["games", "bundles"], platform, query)
+        return Playstation.get_data(s_url)
+
+    # TODO add search methods for other content types
+
+    @staticmethod
     def get_data(url):
         """Get data about the games (price, name, thumbnail, etc) from search results
 
@@ -86,6 +99,7 @@ class Playstation:
 
         if base_data.text == "Error":
             print("Error occured whilst getting data")
+            return "Error"
         else:
             item_count = len(base_data.select('div[class="ember-view"] div[class="grid-cell__title"]'))
 

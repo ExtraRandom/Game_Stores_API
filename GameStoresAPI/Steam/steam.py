@@ -30,7 +30,7 @@ class Steam:
         base_data = bs4.BeautifulSoup(Shared.get_page_raw(full_url), "html.parser")
 
         if base_data.text == "Error":
-            return "Error occured whilst getting Steam data"
+            return "Error"  # occured whilst getting Steam data"
         else:
             results = len(base_data.select('div[id="search_result_container"]'
                                            ' div a[class="search_result_row ds_collapse_flag "]'))
