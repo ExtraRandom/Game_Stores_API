@@ -10,6 +10,7 @@ class Shared:
         if response.status_code == requests.codes.ok:
             return response.text
         else:
+            print(response.status_code)
             return "Error"
 
     @staticmethod

@@ -81,6 +81,9 @@ class Playstation:
         :return:
         """
         s_url = Playstation.format_url(["games", "bundles"], platform, query)
+
+        print(s_url)
+
         return Playstation.get_data(s_url)
 
     # TODO add search methods for other content types
@@ -101,33 +104,35 @@ class Playstation:
             print("Error occured whilst getting data")
             return "Error"
         else:
-            item_count = len(base_data.select('div[class="ember-view"] div[class="grid-cell__title"]'))
+
+            search_html = 'div[class="grid-cell-container"] div[class="ember-view"] div[class="ember-view"] '
+
+            item_count = len(base_data.select(search_html))
 
             if item_count == 0:
                 print("No Search Results")
                 return "Empty"
 
             for i in range(0, item_count):
-                title_id = base_data.select('div[class="ember-view"] div[class="grid-cell__body"]'
-                                            )[i].find("a").attrs['href']
 
-                title = base_data.select('div[class="ember-view"] div[class="grid-cell__body"]'
-                                         )[i].select('div[class="grid-cell__title"]')[0].text
+                title_id = base_data.select(search_html)[i].find("a").attrs['href']
 
-                if base_data.select('div[class="ember-view"] div[class="grid-cell__body"]')[i].select(
+                title = base_data.select(search_html)[i].select('span')[0].text  # 'div[class="grid-cell__title"]'
+
+                if base_data.select(search_html)[i].select(
                         'h3[class="price-display__price"]'):
-                    price = base_data.select('div[class="ember-view"] div[class="grid-cell__body"]')[i].select(
+                    price = base_data.select(search_html)[i].select(
                        'h3[class="price-display__price"]')[0].text
                 else:
                     # Price doesn't exist in typical form
-                    if base_data.select('div[class="ember-view"] div[class="grid-cell__body"]')[i].select(
+                    if base_data.select(search_html)[i].select(
                             'div[class="grid-cell__ineligible-reason"]'):
-                        price = base_data.select('div[class="ember-view"] div[class="grid-cell__body"]')[i].select(
+                        price = base_data.select(search_html)[i].select(
                             'div[class="grid-cell__ineligible-reason"]')[0].text.strip().replace("\n", "")
 
-                    elif base_data.select('div[class="ember-view"] div[class="grid-cell__body"]')[i].select(
+                    elif base_data.select(search_html)[i].select(
                             'div[class="grid-cell__left-detail grid-cell__left-detail--detail-2"]'):
-                        price = base_data.select('div[class="ember-view"] div[class="grid-cell__body"]')[i].select(
+                        price = base_data.select(search_html)[i].select(
                             'div[class="grid-cell__left-detail grid-cell__left-detail--detail-2"]')[0].text
                         if price == "Full Game":
                             price = "Unknown"
@@ -135,7 +140,7 @@ class Playstation:
                     else:
                         price = "Unknown"
 
-                platforms = base_data.select('div[class="ember-view"] div[class="grid-cell__body"]')[i].select(
+                platforms = base_data.select(search_html)[i].select(
                     'div[class="grid-cell__left-detail grid-cell__left-detail--detail-1"]')[0].text
 
                 img = base_data.select('div[class="ember-view"] div[class="grid-cell__thumbnail"]')[i].select(
