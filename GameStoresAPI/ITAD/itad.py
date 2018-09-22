@@ -125,7 +125,7 @@ class Itad:
         :return: List of results
         """
 
-        results = []
+        results = {}
 
         formatted_plains = ""
         for plain in plains:
@@ -143,19 +143,18 @@ class Itad:
             date = str(datetime.utcfromtimestamp(data["data"][game]["added"])).split(" ")[0]
 
             g_results = {
-                    "name": game,
                     "price": data["data"][game]["price"],
                     "date": date,
                     "store": data["data"][game]["shop"]["name"]
                  }
 
-            results.append(g_results)
+            results[game] = g_results
 
         return results
 
     @staticmethod
     def get_multiple_current_best_price(api_key, plains, region="uk"):
-        """Get best historical price from multiple given plains
+        """Get best current best price from multiple given plains
 
         :param api_key: ITAD API Key
         :param plains: List of ITAD Plains
@@ -163,7 +162,7 @@ class Itad:
         :return: List of results
         """
 
-        results = []
+        results = {}
 
         formatted_plains = ""
         for plain in plains:
@@ -178,16 +177,24 @@ class Itad:
         data = json.loads(Shared.get_page_raw(url))
 
         for game in data["data"]:
+            game_d = {
+                        "price": data["data"][game]["list"][0]["price_new"],
+                        "url": data["data"][game]["list"][0]["url"],
+                        "store": data["data"][game]["list"][0]["shop"]["name"]
+            }
+            results[game] = game_d
+
+
+        return results
+
+'''
             g_results = {
                     "name": game,
                     "price": data["data"][game]["list"][0]["price_new"],
                     "url": data["data"][game]["list"][0]["url"],
                     "store": data["data"][game]["list"][0]["shop"]["name"]
                  }
-
-            results.append(g_results)
-
-        return results
+'''
 
 
 
