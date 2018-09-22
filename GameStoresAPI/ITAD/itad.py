@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 from GameStoresAPI.Shared.shared import Shared
 
 
@@ -72,7 +73,7 @@ class Itad:
         return pdata
 
     @staticmethod
-    def get_best_price(api_key, plain, region="uk"):
+    def get_current_best_price(api_key, plain, region="uk"):
         """Get best price for a given plain
 
         :param api_key: ITAD API Key
@@ -109,9 +110,84 @@ class Itad:
             currency = data[".meta"]["currency"]
             price = data["data"][plain]["price"]
             shop = data["data"][plain]["shop"]["name"]
+
             return currency, price, shop
         else:
-            return "Error", "Error", "Error"
+            return "Error", "Error", "Error", "Error"
+
+    @staticmethod
+    def get_multiple_historical_best_price(api_key, plains, region="uk"):
+        """Get best historical price from multiple given plains
+
+        :param api_key: ITAD API Key
+        :param plains: List of ITAD Plains
+        :param region: Pricing Region, Default is UK
+        :return: List of results
+        """
+
+        results = []
+
+        formatted_plains = ""
+        for plain in plains:
+            if formatted_plains == "":
+                formatted_plains = "{}".format(plain)
+            else:
+                formatted_plains = "{},{}".format(formatted_plains, plain)
+
+        url = "https://api.isthereanydeal.com/v01/game/lowest/?key={}&plains={}&region={}&until=" \
+              "".format(api_key, formatted_plains, region)
+
+        data = json.loads(Shared.get_page_raw(url))
+
+        for game in data["data"]:
+            date = str(datetime.utcfromtimestamp(data["data"][game]["added"])).split(" ")[0]
+
+            g_results = {
+                    "name": game,
+                    "price": data["data"][game]["price"],
+                    "date": date,
+                    "store": data["data"][game]["shop"]["name"]
+                 }
+
+            results.append(g_results)
+
+        return results
+
+    @staticmethod
+    def get_multiple_current_best_price(api_key, plains, region="uk"):
+        """Get best historical price from multiple given plains
+
+        :param api_key: ITAD API Key
+        :param plains: List of ITAD Plains
+        :param region: Pricing Region, Default is UK
+        :return: List of results
+        """
+
+        results = []
+
+        formatted_plains = ""
+        for plain in plains:
+            if formatted_plains == "":
+                formatted_plains = "{}".format(plain)
+            else:
+                formatted_plains = "{},{}".format(formatted_plains, plain)
+
+        url = "https://api.isthereanydeal.com/v01/game/prices/?key={}&plains={}&region={}&until=" \
+              "".format(api_key, formatted_plains, region)
+
+        data = json.loads(Shared.get_page_raw(url))
+
+        for game in data["data"]:
+            g_results = {
+                    "name": game,
+                    "price": data["data"][game]["list"][0]["price_new"],
+                    "url": data["data"][game]["list"][0]["url"],
+                    "store": data["data"][game]["list"][0]["shop"]["name"]
+                 }
+
+            results.append(g_results)
+
+        return results
 
 
 
