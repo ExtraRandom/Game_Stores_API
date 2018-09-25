@@ -184,17 +184,7 @@ class Itad:
             }
             results[game] = game_d
 
-
         return results
-
-'''
-            g_results = {
-                    "name": game,
-                    "price": data["data"][game]["list"][0]["price_new"],
-                    "url": data["data"][game]["list"][0]["url"],
-                    "store": data["data"][game]["list"][0]["shop"]["name"]
-                 }
-'''
 
 
 

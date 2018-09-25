@@ -24,10 +24,10 @@ class Steam:
         :param language: Language to retrive data in, Defaults to English
         :return: List of results
         """
-        base_url = "https://store.steampowered.com/search/?cc={}&l={}&term=".format(currency, language)
-        full_url = base_url + Steam.format_search(name)
+        url = "https://store.steampowered.com/search/?cc={}&l={}&term={}&category1=998%2C21".format(
+            currency, language, Steam.format_search(name))
 
-        base_data = bs4.BeautifulSoup(Shared.get_page_raw(full_url), "html.parser")
+        base_data = bs4.BeautifulSoup(Shared.get_page_raw(url), "html.parser")
 
         if base_data.text == "Error":
             return "Error"  # occured whilst getting Steam data"
