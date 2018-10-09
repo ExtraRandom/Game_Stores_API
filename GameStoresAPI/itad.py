@@ -1,6 +1,6 @@
 import json
 from datetime import datetime
-from GameStoresAPI.Shared.shared import Shared
+from GameStoresAPI.shared import Shared
 
 
 class Itad:

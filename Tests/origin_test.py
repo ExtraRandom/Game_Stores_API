@@ -1,4 +1,4 @@
-from GameStoresAPI.Origin.origin import Origin
+from GameStoresAPI.origin import Origin
 
 # Origin.get_url_from_display_name("Battlefield™ V")
 
@@ -9,9 +9,9 @@ from GameStoresAPI.Origin.origin import Origin
 
 # Origin.test("red")
 
-Origin.test("command")
+print(Origin.get_url_from_display_name("command"))
 
 
-
+print(Origin.get_url_from_display_name("Command"))
 
 

@@ -1,5 +1,5 @@
 import bs4
-from GameStoresAPI.Shared.shared import Shared
+from GameStoresAPI.shared import Shared
 import json
 
 
