@@ -1,4 +1,4 @@
-from GameStoresAPI.Playstation.playstation import Playstation
+from GameStoresAPI.playstation import Playstation
 
 test_urls = ["https://store.playstation.com/en-gb/product/EP0002-CUSA02624_00-BLACKOPS3GAME000"
     ##"https://store.playstation.com/en-gb/product/EP0002-CUSA05282_00-CODIWPREORDER001",
@@ -9,6 +9,9 @@ test_urls = ["https://store.playstation.com/en-gb/product/EP0002-CUSA02624_00-BL
 for url in test_urls:
     print(Playstation.get_page_data(url))
 
+
+print(Playstation.search_games("call of duty", ["ps4"]))
+print(Playstation.search_games("spider man", ["ps4"]))
 
 # Not the best code but its only for testing so I'm not too bothered
 

@@ -1,6 +1,6 @@
 import json
 from datetime import datetime
-from GameStoresAPI.Shared.shared import Shared
+from GameStoresAPI.shared import Shared
 
 
 class Itad:
@@ -17,11 +17,11 @@ class Itad:
         url = "https://api.isthereanydeal.com/v01/game/plain/id/?key={}&shop=steam&ids={}" \
               "".format(api_key, ",".join(app_id_list))
 
-        data = json.loads(Shared.get_page_raw(url))  # print(data)  # d_len = len(data['data'])
+        data = json.loads(Shared.get_page_raw(url))
         results = []
 
-        for i in app_id_list:  # range(d_len):
-            results.append(data['data'][i])  # print(results)
+        for i in app_id_list:
+            results.append(data['data'][i])
         return results
 
     @staticmethod

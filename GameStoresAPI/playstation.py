@@ -1,5 +1,5 @@
 import bs4
-from GameStoresAPI.Shared.shared import Shared
+from GameStoresAPI.shared import Shared
 
 
 class Playstation:
@@ -81,8 +81,6 @@ class Playstation:
         :return:
         """
         s_url = Playstation.format_url(["games", "bundles"], platform, query)
-
-        print(s_url)
 
         return Playstation.get_data(s_url)
 
