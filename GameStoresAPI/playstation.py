@@ -82,8 +82,6 @@ class Playstation:
         """
         s_url = Playstation.format_url(["games", "bundles"], platform, query)
 
-        print(s_url)
-
         return Playstation.get_data(s_url)
 
     # TODO add search methods for other content types

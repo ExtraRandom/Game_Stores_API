@@ -1,6 +1,5 @@
 # import bs4
 from GameStoresAPI.shared import Shared
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -12,6 +11,7 @@ import json
 Work in progress
 
 """
+
 
 class Origin:
 
