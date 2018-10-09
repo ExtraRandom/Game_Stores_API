@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="[ITAD]">
-      <change afterPath="$PROJECT_DIR$/GameStoresAPI/GMG/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameStoresAPI/GMG/gmg.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/gmg_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameStoresAPI/Origin/origin.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameStoresAPI/Origin/origin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/itad_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/itad_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/origin_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/origin_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/playstation_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/playstation_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/steam_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/steam_test.py" afterDir="false" />
-    </list>
+    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="Test" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,25 +23,25 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="json" value="1" />
-          <entry key="py" value="20" />
+          <entry key="py" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="Python" value="20" />
+          <entry key="Python" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3524" />
-          <entry key="txt" value="332" />
+          <entry key="py" value="3595" />
+          <entry key="txt" value="336" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="332" />
-          <entry key="Python" value="3524" />
+          <entry key="PLAIN_TEXT" value="336" />
+          <entry key="Python" value="3595" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -73,7 +63,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameStoresAPI/Shared/shared.py">
+        <entry file="file://$PROJECT_DIR$/GameStoresAPI/shared.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
               <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
@@ -82,7 +72,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameStoresAPI/Playstation/playstation.py">
+        <entry file="file://$PROJECT_DIR$/GameStoresAPI/playstation.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
@@ -97,21 +87,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameStoresAPI/GMG/gmg.py">
+        <entry file="file://$PROJECT_DIR$/GameStoresAPI/gmg.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="663">
               <caret line="70" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#104#809#1" />
-                <marker date="1537676105588" expanded="true" signature="859:909" ph="..." />
+                <marker date="1539045045040" expanded="true" signature="852:902" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameStoresAPI/Steam/steam.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GameStoresAPI/steam.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
@@ -125,13 +115,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GameStoresAPI/ITAD/itad.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameStoresAPI/itad.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
               <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameStoresAPI/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -190,7 +192,6 @@
         <option value="$PROJECT_DIR$/GameStoresAPI/Shared/__init__.py" />
         <option value="$PROJECT_DIR$/itad_api_key.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/GameStoresAPI/__init__.py" />
         <option value="$PROJECT_DIR$/Tests/xbox_test.py" />
         <option value="$PROJECT_DIR$/GameStoresAPI/Xbox/xbox.py" />
         <option value="$PROJECT_DIR$/Tests/origin.py" />
@@ -209,6 +210,8 @@
         <option value="$PROJECT_DIR$/GameStoresAPI/ITAD/itad.py" />
         <option value="$PROJECT_DIR$/GameStoresAPI/Steam/steam.py" />
         <option value="$PROJECT_DIR$/Tests/steam_test.py" />
+        <option value="$PROJECT_DIR$/GameStoresAPI/itad.py" />
+        <option value="$PROJECT_DIR$/GameStoresAPI/__init__.py" />
       </list>
     </option>
   </component>
@@ -261,53 +264,6 @@
               <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
               <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="GMG" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="ITAD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="Origin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="Playstation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="Shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="Steam" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-              <item name="GameStoresAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="Xbox" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Game_Stores_API" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Game_Stores_API" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -315,15 +271,15 @@
     </panes>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="I:\Python\Game_Stores_API\Tests" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\Python\Game_Stores_API\GameStoresAPI" />
       <recent name="I:\Python\Game_Stores_API\Tests" />
       <recent name="I:\Python\Game_Stores_API\GameStoresAPI\Shared" />
       <recent name="I:\Python\Game_Stores_API\steam_test" />
       <recent name="I:\Python\Game_Stores_API\Game_Stores_API" />
-      <recent name="I:\Python\Game_Stores_API" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\Python\Game_Stores_API\Tests" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -738,7 +694,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537862553054</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Test">
+      <created>1539045104518</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1539045104519</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView">
@@ -752,8 +715,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49652296" visible="true" weight="0.13909379" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49652296" visible="true" weight="0.13909379" />
       <window_info id="Structure" order="1" sideWeight="0.50347704" side_tool="true" weight="0.13909379" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -765,7 +729,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32885906" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32934782" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32934782" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.2657267" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.2657267" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32934782" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -802,7 +766,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Setup stuff" />
     <MESSAGE value="More Setup stuff" />
     <MESSAGE value="Even More Setup stuff" />
     <MESSAGE value="Working setup" />
@@ -827,7 +790,8 @@
     <MESSAGE value="[ITAD] Add two get multiple prices methods for quicker results&#10;[ITAD] Renamed get_best_price to get_current_best_price" />
     <MESSAGE value="[ITAD] Changed some lists to dict's" />
     <MESSAGE value="[Steam] Search now only includes games and dlc" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Steam] Search now only includes games and dlc" />
+    <MESSAGE value="Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/common.py" />
@@ -884,7 +848,7 @@
     <entry file="file://$PROJECT_DIR$/Tests/xbox_test.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Xbox/xbox.py">
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/xbox.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
@@ -911,13 +875,6 @@
     <entry file="file://$PROJECT_DIR$/GameStoresAPI/Xbox/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/origin_json2.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -942,7 +899,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Origin/origin.py">
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/origin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
           <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
@@ -970,7 +927,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Playstation/playstation.py">
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/playstation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
@@ -983,20 +940,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Steam/steam.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#148#271#1" />
-            <element signature="e#431#2851#0" />
-            <element signature="e#431#681#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/Shared/shared.py">
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/shared.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
@@ -1017,24 +961,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/GMG/gmg.py">
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/gmg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="70" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <element signature="e#104#809#1" />
-            <marker date="1537676105588" expanded="true" signature="859:909" ph="..." />
+            <marker date="1539045045040" expanded="true" signature="852:902" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/ITAD/itad.py">
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/itad.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/steam.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#148#271#1" />
+            <element signature="e#431#2851#0" />
+            <element signature="e#431#681#1" />
           </folding>
         </state>
       </provider>
