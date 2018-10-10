@@ -140,15 +140,21 @@ class Itad:
         data = json.loads(Shared.get_page_raw(url))
 
         for game in data["data"]:
-            date = str(datetime.utcfromtimestamp(data["data"][game]["added"])).split(" ")[0]
 
-            g_results = {
-                    "price": data["data"][game]["price"],
-                    "date": date,
-                    "store": data["data"][game]["shop"]["name"]
-                 }
+            if len(data["data"][game]["list"]) == 0:
+                # skip it
+                pass
+            else:
 
-            results[game] = g_results
+                date = str(datetime.utcfromtimestamp(data["data"][game]["added"])).split(" ")[0]
+
+                g_results = {
+                        "price": data["data"][game]["price"],
+                        "date": date,
+                        "store": data["data"][game]["shop"]["name"]
+                     }
+
+                results[game] = g_results
 
         return results
 
