@@ -1,7 +1,7 @@
 from GameStoresAPI.steam import Steam
 
 
-search_games = ["hotline miami", "euro truck simulator", "wildlands"]
+search_games = ["borderlands pre sequel"]
 
 for i in range(0, len(search_games)):
     print(Steam.search_by_name(search_games[i]))

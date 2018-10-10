@@ -20,8 +20,8 @@ class Itad:
         data = json.loads(Shared.get_page_raw(url))
         results = []
 
-        for i in app_id_list:
-            results.append(data['data'][i])
+        for plain in data['data']:  # for i in app_id_list:
+            results.append(plain) # data['data'][i])
         return results
 
     @staticmethod
