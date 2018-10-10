@@ -1,10 +1,11 @@
 from GameStoresAPI.steam import Steam
-
+import json
 
 search_games = ["borderlands pre sequel"]
 
 for i in range(0, len(search_games)):
-    print(Steam.search_by_name(search_games[i]))
+    test = Steam.search_by_name(search_games[i])
+    print(json.dumps(test))
 
 
 search_urls = ["https://store.steampowered.com/app/209650/Call_of_Duty_Advanced_Warfare__Gold_Edition/",

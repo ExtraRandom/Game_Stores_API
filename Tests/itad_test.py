@@ -21,8 +21,8 @@ if run_this_test is True:
 
 plain_list = ["battlefieldv", "destinyii", "callofdutywwii", "darksoulsremastered"]
 
-a_list = ["app/311210", "app/437350", "app/581450"]
-
+# a_list = ["app/311210", "app/437350", "app/581450"]
+a_list = ["app/261640", "app/319090", "app/459080", "app/316410", "app/275690", "app/321430", "app/289881", "app/289880"]
 
 run_this_other_test = False
 if run_this_other_test is True:
@@ -35,7 +35,7 @@ if run_this_other_test is True:
 # resp =
 # print(resp)
 
-print(itad.get_multiple_plains_from_steam_appids(api_key, a_list))
+# print(itad.get_multiple_plains_from_steam_appids(api_key, a_list))
 print(itad.get_multiple_current_best_price(api_key, itad.get_multiple_plains_from_steam_appids(api_key, a_list)))
 
 

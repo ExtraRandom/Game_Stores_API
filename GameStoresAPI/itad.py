@@ -20,8 +20,8 @@ class Itad:
         data = json.loads(Shared.get_page_raw(url))
         results = []
 
-        for plain in data['data']:  # for i in app_id_list:
-            results.append(plain) # data['data'][i])
+        for i in app_id_list:
+            results.append(data['data'][i])
         return results
 
     @staticmethod
@@ -177,12 +177,16 @@ class Itad:
         data = json.loads(Shared.get_page_raw(url))
 
         for game in data["data"]:
-            game_d = {
-                        "price": data["data"][game]["list"][0]["price_new"],
-                        "url": data["data"][game]["list"][0]["url"],
-                        "store": data["data"][game]["list"][0]["shop"]["name"]
-            }
-            results[game] = game_d
+            if len(data["data"][game]["list"]) == 0:
+                # skip it
+                pass
+            else:
+                game_d = {
+                            "price": data["data"][game]["list"][0]["price_new"],
+                            "url": data["data"][game]["list"][0]["url"],
+                            "store": data["data"][game]["list"][0]["shop"]["name"]
+                }
+                results[game] = game_d
 
         return results
 
