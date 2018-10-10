@@ -140,8 +140,7 @@ class Itad:
         data = json.loads(Shared.get_page_raw(url))
 
         for game in data["data"]:
-
-            if len(data["data"][game]["list"]) == 0:
+            if 'shop' not in data['data'][game]:
                 # skip it
                 pass
             else:

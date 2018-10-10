@@ -36,7 +36,7 @@ if run_this_other_test is True:
 # print(resp)
 
 # print(itad.get_multiple_plains_from_steam_appids(api_key, a_list))
-print(itad.get_multiple_current_best_price(api_key, itad.get_multiple_plains_from_steam_appids(api_key, a_list)))
+print(itad.get_multiple_historical_best_price(api_key, itad.get_multiple_plains_from_steam_appids(api_key, a_list)))
 
 
 # print(itad.get_historical_best_price(api_key, "yookalaylee"))  # , "us"))
