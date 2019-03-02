@@ -1,4 +1,5 @@
 from GameStoresAPI.origin import Origin
+import json
 
 # Origin.get_url_from_display_name("Battlefield™ V")
 
@@ -9,8 +10,8 @@ from GameStoresAPI.origin import Origin
 
 # Origin.test("red")
 
-print(Origin.search_by_name("apex legends"))
+# print(Origin.search_by_name("apex legends"))
 
-print(Origin.search_by_name("battlefield 1"))
+# print(Origin.search_by_name("battlefield"))
 
-
+print(json.dumps(Origin.search_by_name("battlefield v")))

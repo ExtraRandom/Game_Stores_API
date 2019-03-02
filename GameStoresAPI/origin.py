@@ -82,6 +82,9 @@ class Origin:
             i_type = jdata['offers'][g_id]['itemType']
             i_url_end = jdata['offers'][g_id]['gdpPath']
 
+            if i_price == None:
+                continue  # skip if price is none (i believe this is origin access vault only versions of games)
+
             result.append(
                 {
                     "name": i_display_name,
