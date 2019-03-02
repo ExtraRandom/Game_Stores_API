@@ -9,9 +9,8 @@ from GameStoresAPI.origin import Origin
 
 # Origin.test("red")
 
-print(Origin.get_url_from_display_name("command"))
+print(Origin.search_by_name("apex legends"))
 
-
-print(Origin.get_url_from_display_name("Command"))
+print(Origin.search_by_name("battlefield 1"))
 
 
