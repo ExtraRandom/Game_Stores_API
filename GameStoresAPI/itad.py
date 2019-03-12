@@ -65,7 +65,8 @@ class Itad:
         :param region: Pricing region, Default is UK
         :return: All prices for the given plain
         """
-        url = "https://api.isthereanydeal.com/v01/game/prices/?key={}&plains={}&region={}".format(api_key, plain, region)
+        url = "https://api.isthereanydeal.com/v01/game/prices/?key={}&plains={}&region={}" \
+              "".format(api_key, plain, region)
         data = json.loads(Shared.get_page_raw(url))
 
         pdata = data['data'][plain]['list']
@@ -81,7 +82,8 @@ class Itad:
         :param region: Pricing region, Default is UK
         :return: Best price for the given plain
         """
-        url = "https://api.isthereanydeal.com/v01/game/prices/?key={}&plains={}&region={}".format(api_key, plain, region)
+        url = "https://api.isthereanydeal.com/v01/game/prices/?key={}&plains={}&region={}" \
+              "".format(api_key, plain, region)
         data = json.loads(Shared.get_page_raw(url))
 
         if len(data['data'][plain]['list']) == 0:
@@ -142,7 +144,7 @@ class Itad:
         for game in data["data"]:
             if 'shop' not in data['data'][game]:
                 # skip it
-                pass
+                continue
             else:
 
                 date = str(datetime.utcfromtimestamp(data["data"][game]["added"])).split(" ")[0]
