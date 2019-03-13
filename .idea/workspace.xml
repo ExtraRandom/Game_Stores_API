@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="[Origin] Better error handling">
+    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="Version bump">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameStoresAPI/origin.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameStoresAPI/origin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/origin_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/origin_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="153">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -57,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/origin_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -69,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GameStoresAPI/origin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="79">
+              <caret line="79" column="37" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -162,15 +160,15 @@
         <option value="$PROJECT_DIR$/Tests/itad_test.py" />
         <option value="$PROJECT_DIR$/Tests/playstation_test.py" />
         <option value="$PROJECT_DIR$/GameStoresAPI/itad.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/Tests/origin_test.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/GameStoresAPI/origin.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="47" />
-    <option name="y" value="13" />
+    <option name="x" value="57" />
+    <option name="y" value="21" />
     <option name="width" value="1255" />
     <option name="height" value="956" />
   </component>
@@ -389,41 +387,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526425014791</updated>
-    </task>
-    <task id="LOCAL-00004" summary="More Setup stuff">
-      <created>1527098363095</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1527098363095</updated>
-    </task>
-    <task id="LOCAL-00005" summary="More Setup stuff">
-      <created>1527098751668</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1527098751668</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Even More Setup stuff">
-      <created>1527099597901</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1527099597901</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Even More Setup stuff">
-      <created>1527109554068</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1527109554068</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Even More Setup stuff">
-      <created>1527109701854</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1527109701854</updated>
     </task>
     <task id="LOCAL-00009" summary="Even More Setup stuff">
       <created>1527109930104</created>
@@ -733,7 +696,42 @@
       <option name="project" value="LOCAL" />
       <updated>1552491739676</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="[Origin] Changed output to contain whether search was success">
+      <created>1552494715139</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1552494715140</updated>
+    </task>
+    <task id="LOCAL-00054" summary="[Origin] Fix a derp">
+      <created>1552495249244</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1552495249244</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Version bump">
+      <created>1552495269949</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1552495269949</updated>
+    </task>
+    <task id="LOCAL-00056" summary="[Origin ]Fix a derp 2">
+      <created>1552495434195</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1552495434195</updated>
+    </task>
+    <task id="LOCAL-00057" summary="[Origin] Fix a derp 2">
+      <created>1552495467112</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1552495467112</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TodoView">
@@ -746,7 +744,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="47" y="13" width="1255" height="956" extended-state="0" />
+    <frame x="57" y="21" width="1255" height="956" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4951613" visible="true" weight="0.21692687" />
@@ -828,10 +826,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[PS] Fixed URL format&#10;Also add some more documentation in places and tidied up a bit" />
-    <MESSAGE value="[ITAD] Get multiple plains method" />
-    <MESSAGE value="[Steam] Removed 3 items search limit" />
-    <MESSAGE value="[PS] Slightly changed get_data() output for easier use" />
     <MESSAGE value="[PS] Renamed" />
     <MESSAGE value="[Steam] Fixed Search" />
     <MESSAGE value="[ITAD] Get historical best price function added" />
@@ -850,10 +844,14 @@
     <MESSAGE value="[ITAD] Properly fixed bug" />
     <MESSAGE value="[Origin] Added search by name function" />
     <MESSAGE value="[Origin] Fixed issue with price being a none type breaking stuff" />
-    <MESSAGE value="Version bump" />
     <MESSAGE value="[Origin] Better error handling" />
     <MESSAGE value="[Origin] Fix attempt" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Origin] Fix attempt" />
+    <MESSAGE value="[Origin] Changed output to contain whether search was success" />
+    <MESSAGE value="[Origin] Fix a derp" />
+    <MESSAGE value="Version bump" />
+    <MESSAGE value="[Origin ]Fix a derp 2" />
+    <MESSAGE value="[Origin] Fix a derp 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Origin] Fix a derp 2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/common.py" />
@@ -957,34 +955,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GameStoresAPI/playstation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1105">
           <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/shared.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameStoresAPI/itad.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1095">
-          <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -998,20 +972,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/itad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1095">
+          <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameStoresAPI/shared.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/origin_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GameStoresAPI/origin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="79">
+          <caret line="79" column="37" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
         </state>
       </provider>
     </entry>

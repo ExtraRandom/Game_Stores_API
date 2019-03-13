@@ -76,11 +76,6 @@ class Origin:
             except TypeError:   # print("Type Error")
                 continue
 
-        res_str = '{' \
-                  '"success": true,' \
-                  '"results": '
-        res_end = "}"
-
         results = []
 
         for g_id in ids:
@@ -100,9 +95,17 @@ class Origin:
                     "url_end": jdata['offers'][g_id]['gdpPath']
                 }
             )
-        res_mid = json.dumps(results)
 
-        return json.loads(res_str + res_mid + res_end)
+        x = {
+            "success": True,
+            "results": [results]
+        }
+        return x
+
+        res_str = '{"success": true,"results": '
+        res_mid = json.dumps(results)
+        res_end = "}"
+        # return json.loads(res_str + res_mid + res_end)
 
 
 
