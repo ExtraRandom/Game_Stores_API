@@ -51,8 +51,11 @@ class Origin:
     @staticmethod
     def search_by_name(display_name):
         jdata = Origin.__get_or_read_cache()
-        if jdata['success'] == False:
-            return {"success": False}
+        try:
+            if jdata['success'] == False:
+                return json.loads({"success": False})
+        except KeyError:
+            return json.loads({"success": False})
 
         display_name = str(display_name).lower()
         # search_items = display_name.split(" ")

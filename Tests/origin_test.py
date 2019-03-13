@@ -9,7 +9,7 @@ import json
 
 test = Origin.search_by_name("apex legends")
 print(test)
-print(json.loads(test)['success'])
+print(test['success'])
 # dumped = json.dumps(test)
 # print(dumped)
 # print(test['success'])
