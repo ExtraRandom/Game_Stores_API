@@ -53,9 +53,9 @@ class Origin:
         jdata = Origin.__get_or_read_cache()
         try:
             if jdata['success'] == False:
-                return json.loads('{"success": False}')
+                return {"success": False}
         except KeyError:
-            return json.loads('{"success": False}')
+            return {"success": False}
 
         display_name = str(display_name).lower()
         # search_items = display_name.split(" ")
