@@ -2,6 +2,7 @@ from GameStoresAPI.shared import Shared
 import json
 import os
 import time
+from datetime import datetime
 
 """
 
@@ -23,7 +24,7 @@ class Origin:
             )
 
         jdata = json.loads(Shared.get_page_raw(url))
-        jdata["cached_time"] = time.time()
+        jdata["cached_time"] = str(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
         jdata["success"] = True
 
         file = os.path.join(os.getcwd(), "origincache.json")
@@ -51,7 +52,7 @@ class Origin:
     @staticmethod
     def search_by_name(display_name):
         jdata = Origin.__get_or_read_cache()
-        if jdata['success'] == False:
+        if jdata["success"] == False:
             return {"success": False}
 
         display_name = str(display_name).lower()
