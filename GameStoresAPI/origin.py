@@ -101,8 +101,8 @@ class Origin:
                 }
             )
 
-        final_result = {}
-        final_result["success"] = True
+        final_result = {"success": True}
+        # final_result["success"] = True
         final_result["results"] = result
 
         return final_result
