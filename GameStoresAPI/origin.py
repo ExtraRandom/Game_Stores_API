@@ -73,39 +73,34 @@ class Origin:
             except TypeError:   # print("Type Error")
                 continue
 
-        result = []
+        res_str = '{' \
+                  '"success": true,' \
+                  '"results": '
+        res_end = "}"
+
+        results = []
 
         for g_id in ids:
-            i_display_name = jdata['offers'][g_id]['i18n']['displayName']
-            i_description = jdata['offers'][g_id]['i18n']['shortDescription']
             i_price = jdata['offers'][g_id]['countries']['catalogPrice']
-            i_currency = jdata['offers'][g_id]['countries']['countryCurrency']
-            i_dev = jdata['offers'][g_id]['developerFacetKey']
-            i_pub = jdata['offers'][g_id]['publisherFacetKey']
-            i_type = jdata['offers'][g_id]['itemType']
-            i_url_end = jdata['offers'][g_id]['gdpPath']
-
             if i_price == None:
                 continue  # skip if price is none (i believe this is origin access vault only versions of games)
 
-            result.append(
+            results.append(
                 {
-                    "name": i_display_name,
-                    "desc": i_description,
+                    "name": jdata['offers'][g_id]['i18n']['displayName'],
+                    "desc": jdata['offers'][g_id]['i18n']['shortDescription'],
                     "price": round(float(i_price), 2),
-                    "currency": i_currency,
-                    "dev": i_dev,
-                    "pub": i_pub,
-                    "type": i_type,
-                    "url_end": i_url_end
+                    "currency": jdata['offers'][g_id]['countries']['countryCurrency'],
+                    "dev": jdata['offers'][g_id]['developerFacetKey'],
+                    "pub": jdata['offers'][g_id]['publisherFacetKey'],
+                    "type": jdata['offers'][g_id]['itemType'],
+                    "url_end": jdata['offers'][g_id]['gdpPath']
                 }
             )
+        res_mid = json.dumps(results)
 
-        final_result = {"success": True}
-        # final_result["success"] = True
-        final_result["results"] = result
+        return json.loads(res_str + res_mid + res_end)
 
-        return final_result
 
 
 

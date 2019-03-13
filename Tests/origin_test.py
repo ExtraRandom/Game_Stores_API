@@ -8,7 +8,8 @@ import json
 # print(json.dumps(Origin.search_by_name("battlefield v")))
 
 test = Origin.search_by_name("apex legends")
+print(test)
+print(json.loads(test)['success'])
 # dumped = json.dumps(test)
 # print(dumped)
-
-print(test['success'])
+# print(test['success'])
