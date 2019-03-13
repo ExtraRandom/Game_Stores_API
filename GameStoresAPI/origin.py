@@ -95,7 +95,7 @@ class Origin:
 
             x = {
                 "success": True,
-                "results": [results]
+                "results": results
             }
             return x
         except Exception as e:
