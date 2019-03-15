@@ -15,6 +15,7 @@ class Origin:
 
     @staticmethod
     def __update_cache_and_return_json():
+        """Update Cache"""
         url = "https://api4.origin.com/supercat/GB/en_GB/supercat-PCWIN_MAC-GB-en_GB.json.gz"
 
         r_data = Shared.get_page_raw(url)
@@ -35,6 +36,7 @@ class Origin:
 
     @staticmethod
     def __get_or_read_cache():
+        """Get cache, updating if necessary"""
         file = os.path.join(os.getcwd(), "origincache.json")
         if os.path.isfile(file):
             with open(file, "r") as fr:
@@ -51,6 +53,11 @@ class Origin:
 
     @staticmethod
     def search_by_name(display_name):
+        """Search Origin for given name
+
+        :param display_name: Name to search for
+        :return: List of dictionaries with details about search results
+        """
         jdata = Origin.__get_or_read_cache()
 
         try:

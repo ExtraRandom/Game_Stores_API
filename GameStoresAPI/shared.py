@@ -1,4 +1,5 @@
 import requests
+import os
 
 
 class Shared:
@@ -21,8 +22,10 @@ class Shared:
             output = output.replace(replace_char, "%20")
         return output
 
-
-
+    @staticmethod
+    def dbg_working_dir():
+        """Return current working directory (varies from OS)"""
+        return str(os.getcwd())
 
 
 
