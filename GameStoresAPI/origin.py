@@ -24,7 +24,8 @@ class Origin:
                 {"success": False}
             )
 
-        jdata = json.loads(Shared.get_page_raw(url))
+        jdata = json.loads(r_data)
+        del r_data  # save memory
         jdata["cached_time"] = time.time()
         jdata["success"] = True
 
