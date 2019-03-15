@@ -15,6 +15,16 @@ class Shared:
             return "Error"
 
     @staticmethod
+    def get_json(url):
+        """Get the Raw Data (whether that be html or json) of the URL given"""
+        response = requests.request("GET", url)
+        if response.status_code == requests.codes.ok:
+            return response.json()
+        else:
+            print(response.status_code)
+            return "Error"
+
+    @staticmethod
     def url_encode(to_encode, encode_char_list):
         """ """
         output = to_encode

@@ -18,14 +18,14 @@ class Origin:
         """Update Cache"""
         url = "https://api4.origin.com/supercat/GB/en_GB/supercat-PCWIN_MAC-GB-en_GB.json.gz"
 
-        r_data = Shared.get_page_raw(url)
-        if r_data == "Error":
-            return json.loads(
-                {"success": False}
-            )
+        jdata = Shared.get_json(url)
+        # r_data = Shared.get_page_raw(url)
+        # if r_data == "Error":
+        if jdata == "Error":
+            return json.dumps({"success": False})
 
-        jdata = json.loads(r_data)
-        del r_data  # save memory
+        # jdata = json.loads(r_data)
+        # del r_data  # save memory
         jdata["cached_time"] = time.time()
         jdata["success"] = True
 
