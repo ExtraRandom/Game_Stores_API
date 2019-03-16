@@ -4,12 +4,6 @@ import os
 import time
 from datetime import datetime
 
-"""
-
-Work in progress
-
-"""
-
 
 class Origin:
 
@@ -19,17 +13,13 @@ class Origin:
         url = "https://api4.origin.com/supercat/GB/en_GB/supercat-PCWIN_MAC-GB-en_GB.json.gz"
 
         jdata = Shared.get_json(url)
-        # r_data = Shared.get_page_raw(url)
-        # if r_data == "Error":
         if jdata == "Error":
             return json.dumps({"success": False})
 
-        # jdata = json.loads(r_data)
-        # del r_data  # save memory
         jdata["cached_time"] = time.time()
         jdata["success"] = True
 
-        file = os.path.join(os.getcwd(), "origincache.json")
+        file = os.path.join(Shared.get_cache_folder(), "origin_cache.json")
         with open(file, "w") as fw:
             json.dump(jdata, fw, indent=4)
 
@@ -38,7 +28,7 @@ class Origin:
     @staticmethod
     def __get_or_read_cache():
         """Get cache, updating if necessary"""
-        file = os.path.join(os.getcwd(), "origincache.json")
+        file = os.path.join(Shared.get_cache_folder(), "origin_cache.json")
         if os.path.isfile(file):
             with open(file, "r") as fr:
                 cdata = json.loads(fr.read())
@@ -62,9 +52,7 @@ class Origin:
         jdata = Origin.__get_or_read_cache()
 
         try:
-            display_name = str(display_name).lower()
-            # search_items = display_name.split(" ")
-
+            display_name = str(display_name).lower()    # search_items = display_name.split(" ")
             ids = []
 
             for i in range(jdata['totalCount'] - 1):
@@ -78,7 +66,7 @@ class Origin:
                         ids.append(i)
                     elif display_name in str(jdata['offers'][i]['i18n']['displayName']).lower():
                         ids.append(i)
-                except TypeError:   # print("Type Error")
+                except TypeError:
                     continue
 
             results = []

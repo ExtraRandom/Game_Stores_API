@@ -10,8 +10,7 @@ class Shared:
         response = requests.request("GET", page)
         if response.status_code == requests.codes.ok:
             return response.text
-        else:
-            print(response.status_code)
+        else:  # print(response.status_code)
             return "Error"
 
     @staticmethod
@@ -20,8 +19,7 @@ class Shared:
         response = requests.request("GET", url)
         if response.status_code == requests.codes.ok:
             return response.json()
-        else:
-            print(response.status_code)
+        else:  # print(response.status_code)
             return "Error"
 
     @staticmethod
@@ -33,9 +31,12 @@ class Shared:
         return output
 
     @staticmethod
-    def dbg_working_dir():
-        """Return current working directory (varies from OS)"""
-        return str(os.getcwd())
+    def get_cache_folder():
+        """"""
+        folder = os.path.join(os.getcwd(), "GSAPI_Cache")
+        if os.path.exists(folder) is False:
+            os.mkdir(folder)  # Ensure folder exists
+        return folder
 
 
 

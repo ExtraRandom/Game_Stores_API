@@ -1,8 +1,35 @@
-from GameStoresAPI.itad import Itad as itad
+from GameStoresAPI.itad import Itad #  as itad
 import itad_api_key as iak
 
 api_key = iak.key
 
+store_inp = "Upaly"
+store = Itad.check_store_valid(store_inp)
+
+print(store)
+
+t = Itad.search_plain_cache(api_key, store, "far cry")
+# print(t)
+
+
+j = Itad.search_plain_cache(api_key, "origin", "apex")
+# print(j)
+
+
+# print(Itad.search_plain_cache(api_key, "gog", "empire earth"))
+
+print(Itad.search_plain_cache(api_key, "battlenet", "overwatch"))
+
+
+
+
+
+
+
+
+
+
+"""
 # a_list = ["app/360830", "app/537450", "app/8140"]
 t_list = ["call of duty world at war", "mass effect 2", "pillars of eternity", "battlefield 5"]
 
@@ -40,6 +67,11 @@ print(itad.get_multiple_historical_best_price(api_key, itad.get_multiple_plains_
 
 
 # print(itad.get_historical_best_price(api_key, "yookalaylee"))  # , "us"))
+
+"""
+
+
+
 
 
 

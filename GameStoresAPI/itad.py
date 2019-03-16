@@ -1,6 +1,7 @@
 import json
 from datetime import datetime
 from GameStoresAPI.shared import Shared
+import os, time
 
 
 class Itad:
@@ -196,6 +197,94 @@ class Itad:
                 results[game] = game_d
 
         return results
+
+    @staticmethod
+    def check_store_valid(store_inp):
+        store = str(store_inp).lower()
+
+        if store == "steam" or store == "valve" or store == "staem":
+            return "steam"
+        elif store == "battlenet" or store == "blizzard" or store == "bnet":
+            return "battlenet"
+        elif store == "gog" or store == "goodoldgames" or store == "cdpr":
+            return "gog"
+        elif store == "origin" or store == "ea" or store == "orgin" or store == "orign":
+            return "origin"
+        elif store == "uplay" or store == "ubisoft" or store == "usoft" or store == "play" or store == "upaly":
+            return "uplay"
+        else:
+            return "INVALID"
+
+    @staticmethod
+    def search_plain_cache(api_key, store: str, search_term: str):
+        c_data = Itad.__read_or_update_store_cache(api_key, store)
+        hits = []
+
+        search = search_term.split(" ")
+
+        """
+        Potential issue, say you search for 'battlefield v', battlefield vietnam will come up first
+        But if you just search for 'battlefieldv' the results are battlefield 5 as one would expect
+        So maybe do another check for if the word with no spaces has any exact matches
+        
+        This'll work fine for the time being though
+        """
+
+        if len(c_data['data']) == 0:
+            return None
+
+        for item in c_data['data'][store]:
+            plain = c_data['data'][store][item]
+
+            checker = 0
+            for word in search:
+                if word in plain:
+                    checker += 1
+            if checker == len(search):
+                hits.append(plain)
+
+        return hits
+
+    @staticmethod
+    def __fetch_store_cache(api_key, store):
+        """"""
+        s_data = Shared.get_json("https://api.isthereanydeal.com/v01/game/plain/list/?key={}&shops={}"
+                                 "".format(api_key, store))
+        if s_data == "Error":
+            return None
+        else:
+            return s_data
+
+    @staticmethod
+    def __read_or_update_store_cache(api_key, store_name):
+        res = Itad.check_store_valid(store_name)
+        if res != "INVALID":
+            c_file = os.path.join(Shared.get_cache_folder(), "{}_itadcache.json".format(res))
+            if os.path.exists(c_file):
+                with open(c_file, "r") as fr:
+                    c_data = json.loads(fr.read())
+                cache_time = c_data['cached_time']
+                if (time.time() - cache_time) >= 60 * 60 * 24 * 7:  # 7 days
+                    del c_data
+                    new_data = Itad.__fetch_store_cache(api_key, store_name)
+                    if new_data is None:
+                        return None
+                    new_data['cached_time'] = time.time()
+                    with open(c_file, "w") as fw:
+                        json.dump(new_data, fw, indent=4)
+                    return new_data
+                else:
+                    return c_data
+
+            else:  # no file exists
+                new_data = Itad.__fetch_store_cache(api_key, store_name)
+                if new_data is None:
+                    return None
+                new_data['cached_time'] = time.time()
+                with open(c_file, "w") as fw:
+                    json.dump(new_data, fw, indent=4)
+                return new_data
+
 
 
 
