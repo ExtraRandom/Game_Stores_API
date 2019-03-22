@@ -23,16 +23,8 @@ class Shared:
             return "Error"
 
     @staticmethod
-    def url_encode(to_encode, encode_char_list):
-        """ """
-        output = to_encode
-        for replace_char in encode_char_list:
-            output = output.replace(replace_char, "%20")
-        return output
-
-    @staticmethod
     def get_cache_folder():
-        """"""
+        """Get the location of the cache folder"""
         folder = os.path.join(os.getcwd(), "GSAPI_Cache")
         if os.path.exists(folder) is False:
             os.mkdir(folder)  # Ensure folder exists

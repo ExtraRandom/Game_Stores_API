@@ -18,7 +18,7 @@ class Itad:
         url = "https://api.isthereanydeal.com/v01/game/plain/id/?key={}&shop=steam&ids={}" \
               "".format(api_key, ",".join(app_id_list))
 
-        data = json.loads(Shared.get_page_raw(url))
+        data = Shared.get_json(url)
         results = []
 
         for i in app_id_list:
@@ -34,7 +34,7 @@ class Itad:
         :return: The plain for the given app id or error if it doesn't exist
         """
         url = "https://api.isthereanydeal.com/v02/game/plain/?key={}&shop=steam&game_id={}".format(api_key, app_id)
-        data = json.loads(Shared.get_page_raw(url))
+        data = Shared.get_json(url)
 
         if data['.meta']['match'] == False:
             return "Error", "App doesn't exist on ITAD"
@@ -50,7 +50,7 @@ class Itad:
         :return: The plain for the given title or error if it doesn't exist
         """
         url = "https://api.isthereanydeal.com/v02/game/plain/?key={}&title={}".format(api_key, title)
-        data = json.loads(Shared.get_page_raw(url))
+        data = Shared.get_json(url)
 
         if data['.meta']['match'] == False:
             return "Error", "Title doesn't match anything on ITAD, check spelling"
@@ -68,7 +68,7 @@ class Itad:
         """
         url = "https://api.isthereanydeal.com/v01/game/prices/?key={}&plains={}&region={}" \
               "".format(api_key, plain, region)
-        data = json.loads(Shared.get_page_raw(url))
+        data = Shared.get_json(url)
 
         pdata = data['data'][plain]['list']
 
@@ -85,7 +85,7 @@ class Itad:
         """
         url = "https://api.isthereanydeal.com/v01/game/prices/?key={}&plains={}&region={}" \
               "".format(api_key, plain, region)
-        data = json.loads(Shared.get_page_raw(url))
+        data = Shared.get_json(url)
 
         if len(data['data'][plain]['list']) == 0:
             return "Error", "Check plain exists and is correct and try again", "Error"
@@ -107,7 +107,7 @@ class Itad:
         """
         url = "https://api.isthereanydeal.com/v01/game/lowest/?key={}&plains={}&region={}&until=" \
               "".format(api_key, plain, region)
-        data = json.loads(Shared.get_page_raw(url))
+        data = Shared.get_json(url)
 
         if len(data["data"][plain]) == 5:
             currency = data[".meta"]["currency"]
@@ -140,7 +140,7 @@ class Itad:
         url = "https://api.isthereanydeal.com/v01/game/lowest/?key={}&plains={}&region={}&until=" \
               "".format(api_key, formatted_plains, region)
 
-        data = json.loads(Shared.get_page_raw(url))
+        data = Shared.get_json(url)
 
         for game in data["data"]:
             if 'shop' not in data['data'][game]:
@@ -182,7 +182,7 @@ class Itad:
         url = "https://api.isthereanydeal.com/v01/game/prices/?key={}&plains={}&region={}&until=" \
               "".format(api_key, formatted_plains, region)
 
-        data = json.loads(Shared.get_page_raw(url))
+        data = Shared.get_json(url)
 
         for game in data["data"]:
             if len(data["data"][game]["list"]) == 0:
@@ -200,23 +200,35 @@ class Itad:
 
     @staticmethod
     def check_store_valid(store_inp):
+        """Check if given store is a valid store option, allows for some nick names
+
+        :param store_inp: Store to check
+        :return: Proper name of store if correct, or 'INVALID' if store wasn't a valid store
+        """
         store = str(store_inp).lower()
 
-        if store == "steam" or store == "valve" or store == "staem":
+        if store in ['steam', 'valve', 'staem']:
             return "steam"
-        elif store == "battlenet" or store == "blizzard" or store == "bnet":
+        elif store in ['battlenet', 'bnet', 'blizzard', 'blizz', 'blizznet']:
             return "battlenet"
-        elif store == "gog" or store == "goodoldgames" or store == "cdpr":
+        elif store in ['gog', 'goodoldgames', 'cdpr']:
             return "gog"
-        elif store == "origin" or store == "ea" or store == "orgin" or store == "orign":
+        elif store in ['origin', 'ea', 'orgin', 'orign']:
             return "origin"
-        elif store == "uplay" or store == "ubisoft" or store == "usoft" or store == "play" or store == "upaly":
+        elif store in ['uplay', 'ubisoft', 'usoft', 'play', 'upaly']:
             return "uplay"
         else:
             return "INVALID"
 
     @staticmethod
     def search_plain_cache(api_key, store: str, search_term: str):
+        """
+
+        :param api_key: ITAD API Key
+        :param store: Name of store to search
+        :param search_term: Search term to search with
+        :return: list of plains that match the search term, None if failed and 0 if no results
+        """
         c_data = Itad.__read_or_update_store_cache(api_key, store)
         hits = []
 
@@ -243,7 +255,10 @@ class Itad:
             if checker == len(search):
                 hits.append(plain)
 
-        return hits
+        if len(hits) is not 0:
+            return hits
+        else:
+            return 0
 
     @staticmethod
     def __fetch_store_cache(api_key, store):

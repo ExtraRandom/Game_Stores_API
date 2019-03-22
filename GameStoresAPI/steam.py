@@ -1,6 +1,6 @@
 import bs4
 from GameStoresAPI.shared import Shared
-import json
+# import json
 
 
 class Steam:
@@ -87,12 +87,10 @@ class Steam:
 
         url = "https://store.steampowered.com/api/appdetails/?appids={}&cc={}".format(app_id, currency)
 
-        jdata = Shared.get_page_raw(url)
+        sdata = Shared.get_json(url)
 
-        if jdata == "Error":
+        if sdata == "Error":
             return "Error", "Retrieving page data failed in 'store_page_data'"
-
-        sdata = json.loads(jdata)
 
         data = sdata[app_id]['data']
 

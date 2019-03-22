@@ -3,29 +3,19 @@ import itad_api_key as iak
 
 api_key = iak.key
 
-store_inp = "Upaly"
+store_inp = "staem"
 store = Itad.check_store_valid(store_inp)
+# print(store)
+# print(store)
 
-print(store)
+t = Itad.search_plain_cache(api_key, store, "dishonored 2")
+print(t)
 
-t = Itad.search_plain_cache(api_key, store, "far cry")
-# print(t)
-
-
-j = Itad.search_plain_cache(api_key, "origin", "apex")
+# j = Itad.search_plain_cache(api_key, "origin", "apex")
 # print(j)
-
-
-# print(Itad.search_plain_cache(api_key, "gog", "empire earth"))
-
-print(Itad.search_plain_cache(api_key, "battlenet", "overwatch"))
-
-
-
-
-
-
-
+# ee = (Itad.search_plain_cache(api_key, "gog", "sim city 3000"))
+# print(ee)
+# print(Itad.search_plain_cache(api_key, "battlenet", "overwatch"))
 
 
 
