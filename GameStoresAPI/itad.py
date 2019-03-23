@@ -229,18 +229,34 @@ class Itad:
         :param search_term: Search term to search with
         :return: list of plains that match the search term, None if failed and 0 if no results
         """
-        c_data = Itad.__read_or_update_store_cache(api_key, store)
-        hits = []
-
-        search = search_term.split(" ")
 
         """
         Potential issue, say you search for 'battlefield v', battlefield vietnam will come up first
         But if you just search for 'battlefieldv' the results are battlefield 5 as one would expect
         So maybe do another check for if the word with no spaces has any exact matches
-        
+
         This'll work fine for the time being though
         """
+
+        c_data = Itad.__read_or_update_store_cache(api_key, store)
+        hits = []
+
+        search = search_term.split(" ")
+        search_other = []
+
+        for word in search:
+            appd = False
+            number = list(filter(str.isdigit, word))
+            for num in number:
+                search_other.append(Itad.__number_to_roman_numeral(int(num)))
+                appd = True
+            if appd is False:
+                search_other.append(word)
+
+        if search == search_other:
+            check_both = False
+        else:
+            check_both = True
 
         if len(c_data['data']) == 0:
             return None
@@ -248,17 +264,46 @@ class Itad:
         for item in c_data['data'][store]:
             plain = c_data['data'][store][item]
 
-            checker = 0
-            for word in search:
-                if word in plain:
-                    checker += 1
-            if checker == len(search):
-                hits.append(plain)
+            if check_both is False:
+                checker = 0
+                for word in search:
+                    if word in plain:
+                        checker += 1
+                if checker == len(search):
+                    hits.append(plain)
+            else:  # check_both is true
+                checker = 0
+                other_checker = 0
+                for word in search:
+                    if word in plain:
+                        checker += 1
+                for word_o in search_other:
+                    if word_o in plain:
+                        other_checker += 1
+
+                hit_max = len(search)
+                if checker == hit_max or other_checker == hit_max:
+                    hits.append(plain)
 
         if len(hits) is not 0:
             return hits
         else:
             return 0
+
+    @staticmethod
+    def __number_to_roman_numeral(number_input: int):
+        """https://www.oreilly.com/library/view/python-cookbook/0596001673/ch03s24.html"""
+        if number_input is 0:
+            return 0
+
+        ints = (1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1)
+        nums = ('M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I')
+        result = []
+        for i in range(len(ints)):
+            count = int(number_input / ints[i])
+            result.append(nums[i] * count)
+            number_input -= ints[i] * count
+        return ''.join(result).lower()
 
     @staticmethod
     def __fetch_store_cache(api_key, store):
