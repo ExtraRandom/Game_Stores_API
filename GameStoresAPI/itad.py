@@ -131,7 +131,12 @@ class Itad:
         results = {}
 
         formatted_plains = ""
+        count = 0
         for plain in plains:
+            if count == 10:
+                break
+            else:
+                count += 1
             if formatted_plains == "":
                 formatted_plains = "{}".format(plain)
             else:
@@ -173,7 +178,12 @@ class Itad:
         results = {}
 
         formatted_plains = ""
+        count = 0
         for plain in plains:
+            if count == 10:
+                break
+            else:
+                count += 1
             if formatted_plains == "":
                 formatted_plains = "{}".format(plain)
             else:
@@ -183,6 +193,9 @@ class Itad:
               "".format(api_key, formatted_plains, region)
 
         data = Shared.get_json(url)
+
+        if data == "Error":
+            return None
 
         for game in data["data"]:
             if len(data["data"][game]["list"]) == 0:
