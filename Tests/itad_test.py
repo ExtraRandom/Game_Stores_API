@@ -3,15 +3,16 @@ import itad_api_key as iak
 
 api_key = iak.key
 
-store_inp = "steam"
-store = Itad.check_store_valid(store_inp)
+store_inp = "epic"
+# store = Itad.check_store_valid(store_inp)
+# print(store)
 # print(store)
 # print(store)
 
-t = Itad.search_plain_cache(api_key, store, "call of duty")
+t = Itad.search_plain_cache(api_key, store_inp, "borderlands")
 print(t)
 
-print(Itad.get_multiple_current_best_price(api_key, t))
+# print(Itad.get_multiple_current_best_price(api_key, t))
 
 # j = Itad.search_plain_cache(api_key, "origin", "apex")
 # print(j)

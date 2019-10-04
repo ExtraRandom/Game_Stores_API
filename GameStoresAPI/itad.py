@@ -230,13 +230,17 @@ class Itad:
             return "origin"
         elif store in ['uplay', 'ubisoft', 'usoft', 'play', 'upaly']:
             return "uplay"
+        elif store in ['epic', 'egs', 'scum']:
+            return "epic"
+        # elif store in ['all', 'every', 'combined']:
+            # return "steam%2Cgog"
+            # return "steam,battlenet,gog,origin,uplay"
         else:
             return "INVALID"
 
     @staticmethod
     def search_plain_cache(api_key, store: str, search_term: str):
         """
-
         :param api_key: ITAD API Key
         :param store: Name of store to search
         :param search_term: Search term to search with
@@ -321,8 +325,8 @@ class Itad:
     @staticmethod
     def __fetch_store_cache(api_key, store):
         """"""
-        s_data = Shared.get_json("https://api.isthereanydeal.com/v01/game/plain/list/?key={}&shops={}"
-                                 "".format(api_key, store))
+        url = "https://api.isthereanydeal.com/v01/game/plain/list/?key={}&shops={}".format(api_key, store)
+        s_data = Shared.get_json(url)
         if s_data == "Error":
             return None
         else:
