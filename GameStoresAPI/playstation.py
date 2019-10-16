@@ -112,10 +112,9 @@ class Playstation:
                 return "Empty"
 
             for i in range(0, item_count):
-
                 title_id = base_data.select(search_html)[i].find("a").attrs['href']
 
-                title = base_data.select(search_html)[i].select('span')[0].text  # 'div[class="grid-cell__title"]'
+                title = base_data.select(search_html)[i].select('span[title]')[0].text  # 'div[class="grid-cell__title"]'
 
                 if base_data.select(search_html)[i].select(
                         'h3[class="price-display__price"]'):

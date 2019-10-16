@@ -7,12 +7,12 @@ test_urls = ["https://store.playstation.com/en-gb/product/EP0002-CUSA02624_00-BL
              # "https://store.playstation.com/en-gb/product/EP9000-PCSF00570_00-BORDERLANDS2PSV1"]
              ]
 
-for url in test_urls:
-    print(Playstation.get_page_data(url))
+#for url in test_urls:
+#    print(Playstation.get_page_data(url))
 
 
-print(Playstation.search_games("call of duty", ["ps4"]))
-print(Playstation.search_games("spider man", ["ps4"]))
+print(Playstation.search_games("gravity rush", ["ps4"]))
+# print(Playstation.search_games("spider man", ["ps4"]))
 
 # Not the best code but its only for testing so I'm not too bothered
 
