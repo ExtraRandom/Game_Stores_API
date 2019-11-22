@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="[Playstation] Fixed the wrong title being returned">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="[ITAD] Inital commit of rewrite">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameStoresAPI/steam.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameStoresAPI/steam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/itad_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/itad_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/playstation_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/playstation_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameStoresAPI/itad_rw.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameStoresAPI/itad_rw.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,13 +197,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526425014791</updated>
-    </task>
-    <task id="LOCAL-00024" summary="[ITAD] Added getting plain from title">
-      <created>1527231903069</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1527231903069</updated>
     </task>
     <task id="LOCAL-00025" summary="[PS] Fixed URL format&#10;Also add some more documentation in places and tidied up a bit">
       <created>1527242625455</created>
@@ -546,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571204138977</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="[ITAD] Inital commit of rewrite">
+      <created>1574440302245</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1574440302245</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -577,7 +572,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test" />
     <MESSAGE value="[ITAD] Changed loop logic to fix a bug" />
     <MESSAGE value="[ITAD] Fixed the right thing this time" />
     <MESSAGE value="Version number increment" />
@@ -602,6 +596,7 @@
     <MESSAGE value="[ITAD] Fixed URL's being too long breaking search" />
     <MESSAGE value="[ITAD] Added EGS store option" />
     <MESSAGE value="[Playstation] Fixed the wrong title being returned" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Playstation] Fixed the wrong title being returned" />
+    <MESSAGE value="[ITAD] Inital commit of rewrite" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ITAD] Inital commit of rewrite" />
   </component>
 </project>

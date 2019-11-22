@@ -65,7 +65,10 @@ class Itad:
                 }
                 results[game] = game_d
 
-        return results
+        if len(results) == 0:
+            return 0
+        else:
+            return results
 
     @staticmethod
     def get_price_historic_best(api_key, plains, region="uk"):
@@ -88,12 +91,15 @@ class Itad:
             }
             results[game] = game_d
 
-        return results
+        if len(results) == 0:
+            return 0
+        else:
+            return results
 
     @staticmethod
     def search_plain_cache(api_key, store: str, search_term: str):
         cache_data = Itad.__read_or_update_cache(api_key, store)
-
+        store_check = Itad.verify_store(store)
         t = len(cache_data['data'])
         # print(t)
 
@@ -105,20 +111,17 @@ class Itad:
         for word in search:
             if Itad.__is_int(word):
                 number_broken = [int(n) for n in str(word)]
-                # print(number_broken)
                 number_fixed = ""
                 for digit in number_broken:
                     number_fixed = "{}{}".format(number_fixed, Itad.__int_to_roman(digit))
                     number_fixed = number_fixed.lower()
-                searches.append(number_fixed)
-                # searches.append(word)
+                searches.append(number_fixed)  # searches.append(word)
             else:
                 searches.append(word)
 
-        # print(searches)
         target = len(searches)
 
-        if store != "all":
+        if store_check != "steam,battlenet,gog,origin,uplay,epic":
             for item in cache_data['data'][store]:
                 plain = cache_data['data'][store][item]
                 counts = 0
