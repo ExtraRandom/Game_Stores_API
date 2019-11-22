@@ -20,8 +20,8 @@ class Steam:
         """Search for a game using a given name
 
         :param name: Search term
-        :param currency: Currency to use, Defaults to GBP
-        :param language: Language to retrive data in, Defaults to English
+        :param currency: Currency to use, Default is GBP
+        :param language: Language to retrive data in, Default is English
         :return: List of results
         """
         url = "https://store.steampowered.com/search/?cc={}&l={}&term={}&category1=998%2C21".format(

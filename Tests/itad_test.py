@@ -1,16 +1,36 @@
-from GameStoresAPI.itad import Itad #  as itad
+# from GameStoresAPI.itad import Itad #  as itad
 import itad_api_key as iak
-
+from GameStoresAPI.itad_rw import Itad
 api_key = iak.key
 
-store_inp = "epic"
+a_list = ["app/360830", "app/537450", "app/8140"]
+
+
+test = Itad.search_plain_cache(api_key, "all", "left 4 dead 2")
+test2 = Itad.search_plain_cache(api_key, "origin", "battlefield 1942")
+
+print(test)
+
+
+# t = Itad.get_price_current_best(api_key, Itad.get_plains_from_steam_appids(api_key, a_list))
+# j = Itad.get_price_historic_best(api_key, Itad.get_plains_from_steam_appids(api_key, a_list))
+
+# t = Itad.get_plains_from_steam_appids(api_key, a_list)
+# j = Itad.get_plains_from_steam_appids(api_key, "app/8140")
+
+# print(t)
+# print(j)
+
+
+
+# store_inp = "epic"
 # store = Itad.check_store_valid(store_inp)
 # print(store)
 # print(store)
 # print(store)
 
-t = Itad.search_plain_cache(api_key, store_inp, "borderlands")
-print(t)
+# t = Itad.search_plain_cache(api_key, store_inp, "borderlands")
+# print(t)
 
 # print(Itad.get_multiple_current_best_price(api_key, t))
 

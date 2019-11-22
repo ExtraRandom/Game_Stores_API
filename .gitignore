@@ -98,3 +98,6 @@ ENV/
 # mypy
 .mypy_cache/
 *.xml
+
+# Stuff
+/Tests/GSAPI_Cache

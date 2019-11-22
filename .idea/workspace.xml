@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="[ITAD] Added EGS store option">
+    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="[Playstation] Fixed the wrong title being returned">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameStoresAPI/steam.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameStoresAPI/steam.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/itad_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/itad_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/playstation_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/playstation_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,7 +69,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.playstation_test">
+  <component name="RunManager" selected="Python.itad_test">
     <configuration name="gmg_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Game_Stores_API" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -180,10 +184,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.playstation_test" />
         <item itemvalue="Python.itad_test" />
-        <item itemvalue="Python.steam_test" />
         <item itemvalue="Python.origin_test" />
+        <item itemvalue="Python.playstation_test" />
+        <item itemvalue="Python.steam_test" />
         <item itemvalue="Python.gmg_test" />
       </list>
     </recent_temporary>
@@ -198,13 +202,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526425014791</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Remove a whoops">
-      <created>1527148937257</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1527148937257</updated>
     </task>
     <task id="LOCAL-00024" summary="[ITAD] Added getting plain from title">
       <created>1527231903069</created>
@@ -542,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570182325956</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="[Playstation] Fixed the wrong title being returned">
+      <created>1571204138977</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1571204138977</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -573,7 +577,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[Steam] Search now only includes games and dlc" />
     <MESSAGE value="Test" />
     <MESSAGE value="[ITAD] Changed loop logic to fix a bug" />
     <MESSAGE value="[ITAD] Fixed the right thing this time" />
@@ -598,6 +601,7 @@
     <MESSAGE value="[ITAD] Improve search cache function &#10;- Because some plains contain roman numerals instead of numbers but not all of them do, the search checks for both (i.e. if the input was 'dishonored 2' it will search for that and 'dishonored ii'" />
     <MESSAGE value="[ITAD] Fixed URL's being too long breaking search" />
     <MESSAGE value="[ITAD] Added EGS store option" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ITAD] Added EGS store option" />
+    <MESSAGE value="[Playstation] Fixed the wrong title being returned" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Playstation] Fixed the wrong title being returned" />
   </component>
 </project>
