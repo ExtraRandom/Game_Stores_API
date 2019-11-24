@@ -80,7 +80,7 @@ class Itad:
     @staticmethod
     def find_games(api_key, search_term):
         """EXPERIMENTAL"""
-        limit = 30
+        limit = 100
         shops_list = ["game2", "amazonus", "bistore", "battlenet", "chrono", "dlgamer", "direct2drive", "discord",
                       "dreamgame", "epic", "fireflower", "gog", "gamebillet", "gamersgate", "gamesplanet", "steam"
                       "gamesrepublic", "gemly", "greenmangaming", "humblestore", "indiegalastore", "lbostore",
@@ -88,9 +88,9 @@ class Itad:
         shops_str = ",".join(shops_list)
 
         url = "https://api.isthereanydeal.com/v01/search/search/?key={}&" \
-              "q={}&limit={}&region=uk" \
-              "&shops={}" \
-              "".format(api_key, search_term, limit, shops_str)  #
+              "q={}&limit={}&region=uk&shops={}" \
+              "".format(api_key, search_term, limit, shops_str)  # "&shops={}" \
+
         data = Shared.get_json(url)
         if data is "Error":
             return None
@@ -101,9 +101,12 @@ class Itad:
         for game in data['data']['list']:
             game_name = data['data']['list'][count]['title']
             # print(game_name, data["data"]["list"][count]["price_new"])
-            if game_name in results and int(data["data"]["list"][count]["price_new"]) > int(results[game_name]['price']):
+
+            if game_name in results \
+                    and float(data["data"]["list"][count]["price_new"]) > float(results[game_name]['price']):
                 count += 1
-                continue
+                continue  # don't replace if new is bigger than current
+
             game_d = {
                 # "name": game_name,
                 "price": data["data"]["list"][count]["price_new"],
