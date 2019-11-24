@@ -80,7 +80,7 @@ class Itad:
     @staticmethod
     def find_games(api_key, search_term):
         """EXPERIMENTAL"""
-        limit = 20
+        limit = 30
         shops_list = ["game2", "amazonus", "bistore", "battlenet", "chrono", "dlgamer", "direct2drive", "discord",
                       "dreamgame", "epic", "fireflower", "gog", "gamebillet", "gamersgate", "gamesplanet", "steam"
                       "gamesrepublic", "gemly", "greenmangaming", "humblestore", "indiegalastore", "lbostore",
@@ -94,15 +94,13 @@ class Itad:
         data = Shared.get_json(url)
         if data is "Error":
             return None
-
         # print(json.dumps(data))
-
         results = {}
         count = 0
 
         for game in data['data']['list']:
             game_name = data['data']['list'][count]['title']
-            # print(game_name)
+            # print(game_name, data["data"]["list"][count]["price_new"])
             if game_name in results and int(data["data"]["list"][count]["price_new"]) > int(results[game_name]['price']):
                 count += 1
                 continue
