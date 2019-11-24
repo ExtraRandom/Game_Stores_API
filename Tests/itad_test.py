@@ -1,17 +1,31 @@
 # from GameStoresAPI.itad import Itad #  as itad
 import itad_api_key as iak
 from GameStoresAPI.itad_rw import Itad
+import json
+
 api_key = iak.key
 
 a_list = ["app/360830", "app/537450", "app/8140"]
 
+t = Itad.find_games(api_key, "battlefield")
+print(json.dumps(t))
 
-test = Itad.search_plain_cache(api_key, "all", "left 4 dead 2")
+
+"""
+test = Itad.search_plain_cache(api_key, "steam", "left 4 dead")
 test2 = Itad.search_plain_cache(api_key, "origin", "battlefield 1942")
 
-print(test)
+store_test = Itad.verify_store("all")
+test3 = Itad.search_plain_cache(api_key, store_test, "battlefield")
+
+# print(store_test)
+print(test3)
 
 
+print(Itad.get_game_name_from_plains(api_key, test3))
+
+t = Itad.get_price_current_best(api_key, Itad.search_plain_cache(api_key, "origin", "battlefield iii"))
+"""
 # t = Itad.get_price_current_best(api_key, Itad.get_plains_from_steam_appids(api_key, a_list))
 # j = Itad.get_price_historic_best(api_key, Itad.get_plains_from_steam_appids(api_key, a_list))
 

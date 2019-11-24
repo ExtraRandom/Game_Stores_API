@@ -16,10 +16,15 @@ class Shared:
     @staticmethod
     def get_json(url):
         """Get the Raw Data (whether that be html or json) of the URL given"""
+        # print(url)
+        # url_length = len(url)
+        # if url_length >= 10000:
+        #    raise Exception("Requesting a URL that exceeds 10000 characters")
+
         response = requests.request("GET", url)
         if response.status_code == requests.codes.ok:
             return response.json()
-        else:  # print(response.status_code)
+        else:
             return "Error"
 
     @staticmethod
