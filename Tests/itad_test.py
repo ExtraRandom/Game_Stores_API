@@ -7,7 +7,7 @@ api_key = iak.key
 
 a_list = ["app/360830", "app/537450", "app/8140"]
 
-t = Itad.find_games(api_key, "battlefield")
+t = Itad.find_games(api_key, "left 4 dead")
 print(json.dumps(t))
 
 

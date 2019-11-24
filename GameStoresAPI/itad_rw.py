@@ -82,7 +82,7 @@ class Itad:
         """EXPERIMENTAL"""
         limit = 100
         shops_list = ["game2", "amazonus", "bistore", "battlenet", "chrono", "dlgamer", "direct2drive", "discord",
-                      "dreamgame", "epic", "fireflower", "gog", "gamebillet", "gamersgate", "gamesplanet", "steam"
+                      "dreamgame", "epic", "fireflower", "gog", "gamebillet", "gamersgate", "gamesplanet", "steam",
                       "gamesrepublic", "gemly", "greenmangaming", "humblestore", "indiegalastore", "lbostore",
                       "microsoft", "oculus", "origin", "playism", "savemi", "squenix", "uplay", "voidu", "wingamestore"]
         shops_str = ",".join(shops_list)

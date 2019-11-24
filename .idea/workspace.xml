@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="[ITAD_RW] fix probably">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="version bump">
       <change beforePath="$PROJECT_DIR$/GameStoresAPI/itad_rw.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameStoresAPI/itad_rw.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/itad_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/itad_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,20 +197,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526425014791</updated>
-    </task>
-    <task id="LOCAL-00029" summary="[PS] Renamed">
-      <created>1529645956224</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1529645956224</updated>
-    </task>
-    <task id="LOCAL-00030" summary="[Steam] Fixed Search">
-      <created>1531973991021</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1531973991021</updated>
     </task>
     <task id="LOCAL-00031" summary="[ITAD] Get historical best price function added">
       <created>1533668951317</created>
@@ -541,7 +527,21 @@
       <option name="project" value="LOCAL" />
       <updated>1574610426278</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="[ITAD_RW] fix probably part 2">
+      <created>1574612425990</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1574612425991</updated>
+    </task>
+    <task id="LOCAL-00079" summary="version bump">
+      <created>1574612448811</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1574612448811</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -572,7 +572,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[ITAD] Properly fixed bug" />
     <MESSAGE value="[Origin] Added search by name function" />
     <MESSAGE value="[Origin] Fixed issue with price being a none type breaking stuff" />
     <MESSAGE value="[Origin] Better error handling" />
@@ -595,8 +594,9 @@
     <MESSAGE value="[ITAD] Inital commit of rewrite" />
     <MESSAGE value="[ITAD] Fixed plain search" />
     <MESSAGE value="[ITAD_RW] added new function using itad api 'search' endpoint" />
-    <MESSAGE value="version bump" />
     <MESSAGE value="[ITAD_RW] fix probably" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ITAD_RW] fix probably" />
+    <MESSAGE value="[ITAD_RW] fix probably part 2" />
+    <MESSAGE value="version bump" />
+    <option name="LAST_COMMIT_MESSAGE" value="version bump" />
   </component>
 </project>
