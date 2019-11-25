@@ -12,6 +12,11 @@ class Itad:
         # TODO documentation
 
     @staticmethod
+    def break_test():
+        """stop judging me"""
+        return 10 / 0
+
+    @staticmethod
     def __comma_string(str_input):
         if isinstance(str_input, str):
             return True, str(str_input)
@@ -89,12 +94,11 @@ class Itad:
 
         url = "https://api.isthereanydeal.com/v01/search/search/?key={}&" \
               "q={}&limit={}&region=uk&shops={}" \
-              "".format(api_key, search_term, limit, shops_str)  # "&shops={}" \
+              "".format(api_key, search_term, limit, shops_str)
 
         data = Shared.get_json(url)
         if data is "Error":
             return None
-        # print(json.dumps(data))
         results = {}
         count = 0
 
