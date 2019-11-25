@@ -12,11 +12,6 @@ class Itad:
         # TODO documentation
 
     @staticmethod
-    def break_test():
-        """stop judging me"""
-        return 10 / 0
-
-    @staticmethod
     def __comma_string(str_input):
         if isinstance(str_input, str):
             return True, str(str_input)
@@ -103,8 +98,7 @@ class Itad:
         count = 0
 
         for game in data['data']['list']:
-            game_name = data['data']['list'][count]['title']
-            # print(game_name, data["data"]["list"][count]["price_new"])
+            game_name = data['data']['list'][count]['title']  # print(game_name, data["data"]["list"][count]["price_new"])
 
             if game_name in results \
                     and float(data["data"]["list"][count]["price_new"]) > float(results[game_name]['price']):

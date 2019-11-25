@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="[ITAD_RW] Added missing comma (fixes lack of steam results)">
+    <list default="true" id="a5fa0ecd-9d94-4ce5-a9e3-4cd57b286073" name="Default" comment="testing something in a  really dumb way">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameStoresAPI/itad_rw.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameStoresAPI/itad_rw.py" afterDir="false" />
     </list>
@@ -197,13 +197,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526425014791</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Changed version number&#10;[ITAD] Minor formatting changes">
-      <created>1533669075840</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1533669075840</updated>
     </task>
     <task id="LOCAL-00033" summary="[PS and Steam]Added some error catching">
       <created>1534013897109</created>
@@ -541,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574612790551</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="testing something in a  really dumb way">
+      <created>1574680262130</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1574680262130</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -572,7 +572,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[Origin] Fixed issue with price being a none type breaking stuff" />
     <MESSAGE value="[Origin] Better error handling" />
     <MESSAGE value="[Origin] Fix attempt" />
     <MESSAGE value="[Origin] Changed output to contain whether search was success" />
@@ -597,6 +596,7 @@
     <MESSAGE value="[ITAD_RW] fix probably part 2" />
     <MESSAGE value="version bump" />
     <MESSAGE value="[ITAD_RW] Added missing comma (fixes lack of steam results)" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ITAD_RW] Added missing comma (fixes lack of steam results)" />
+    <MESSAGE value="testing something in a  really dumb way" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing something in a  really dumb way" />
   </component>
 </project>
